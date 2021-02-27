@@ -1,0 +1,88 @@
+#! /bin/sh
+# Aliases
+
+#alias reload="source ~/.bashrc"
+
+# Navegación
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"
+
+# permite ejecutar aliases como sudo
+alias sudo="sudo "
+
+# verbose en los comandos básicos y pedir confirmación
+alias mv="mv -vi"      #confirmar antes de sobreescribir y muestra lo que hace
+alias cp="cp -vi"      #confirmar antes de sobreescribir y muestra lo que hace
+alias rm="rm -vI"         #muestra lo que hace
+alias mkdir="mkdir -pv"   #muestra lo que hace
+alias ln="ln -vi"
+
+# ls
+#alias ls="ls --color=auto" #siempre muestra color
+alias ls="ls --color=auto --group-directories-first -vX" #ordena ls
+alias l="ls"
+alias la="l -A"
+alias ll="l -lh"   #ordena ls -l y muestra archivos ocultos
+alias lla="l -lhA"
+
+# siempre muestra colores en grep
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+
+# aplicaciones
+alias firewall="gufw"
+
+# editar archivos importantes
+alias zr="nano ~/.zshrc"
+alias br="nano ~/.bashrc"
+alias nr="nano ~/.nanorc"
+alias al="nano ~/.aliases"
+alias fstab="nano /etc/fstab"
+
+
+# paquetes
+# pacman
+if [ -f /usr/bin/pacman ]; then
+    alias update="sudo pacman -Syyy"
+    alias upgrade="sudo pacman -Syu"
+    #alias fupdate="sudo pacman -Syyu" # fuerza el upgrade
+    alias instalar="sudo pacman -S"
+    alias desinstalar="sudo pacman -R"
+    alias desinstalar-todo="sudo pacman -Rscn"
+	alias buscar="pacman -Ss"
+    alias huerfanos="pacman -Qdt"  # busca Paquetes huérfanos
+    alias mirrorlist="nano /etc/pacman.d/mirrorlist"
+    alias update-mirrors="sudo pacman-mirrors -c Chile,Uruguay,Brazil,Australia,Costa_Rica && sudo pacman -Syy && cat /etc/pacman.d/mirrorlist" # actualiza los mirrors de los paises dados
+fi
+# apt
+if [ -f /usr/bin/apt ]; then
+  alias update='sudo apt update'
+  alias upgrade='sudo apt update && sudo apt dist-upgrade'
+  alias instalar='sudo apt install'
+  alias buscar="apt -search"
+fi
+
+# atajos
+alias c="clear"
+alias h="history"
+alias gc="cd ~/Descargas/Github && git clone"
+alias e="exit"
+
+# lugares
+alias respaldos="cd ~/.respaldos"
+alias almacenamiento="cd /run/media/ariel/almacenamiento/"
+alias copias="cd /run/media/ariel/copias/"
+#alias appimages="cd ~/.local/share/applications/appimages"
+
+# phyton
+alias py="python"
+alias py3="python3"
+
+# otros aliases standard
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias more=less
