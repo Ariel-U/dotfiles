@@ -69,7 +69,6 @@ fi
 # atajos
 alias c="clear"
 alias h="history"
-alias gc="cd ~/Descargas/Github && git clone"
 alias e="exit"
 
 # lugares
@@ -82,7 +81,15 @@ alias copias="cd /run/media/ariel/copias/"
 alias py="python"
 alias py3="python3"
 
+# git 
+# alias g="git"
+# alias gc="cd ~/Descargas/Github/ && git clone"
+# alias gs="git status"
+# alias ga="git add"
+# alias gp="git push"
+# alias gc="git commit"
+
 # otros aliases standard
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
+alias df='df -h'      # human-readable sizes
+alias free='free -m'  # show sizes in MB
 alias more=less

@@ -14,10 +14,13 @@ fi
 plugins=(zsh-autosuggestions zsh-completitions)
 
 #:-----------------------------------:
-# aliases
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
-fi
+
+# Carga la configuración
+for file in ~/.{aliases,functions}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
 
 #:-----------------------------------:
 ## scripts
@@ -44,5 +47,3 @@ _comp_options+=(globdots)               # Include hidden files.
 
 # Custom ZSH Binds
 #bindkey '^ ' autosuggest-accept
-
-
