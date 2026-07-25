@@ -19,16 +19,15 @@ ContrastEffect=2
 Enable=false
 IntensityAmount=0
 IntensityEffect=0
-inactiveFrame=100,100,100 # Inactive window border (Gray)
 
 [Colors:Button]
-BackgroundAlternate=39,103,66
+BackgroundAlternate=30,87,116
 BackgroundNormal=41,44,48
-DecorationFocus=39,129,75
-DecorationHover=39,129,75
-ForegroundActive=39,129,75
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=61,174,233
 ForegroundInactive=161,169,177
-ForegroundLink=69,227,132
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=252,252,252
@@ -38,11 +37,11 @@ ForegroundVisited=155,89,182
 [Colors:Complementary]
 BackgroundAlternate=30,87,116
 BackgroundNormal=32,35,38
-DecorationFocus=39,129,75
-DecorationHover=39,129,75
-ForegroundActive=39,129,75
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=61,174,233
 ForegroundInactive=161,169,177
-ForegroundLink=69,227,132
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=252,252,252
@@ -52,11 +51,11 @@ ForegroundVisited=155,89,182
 [Colors:Header]
 BackgroundAlternate=32,35,38
 BackgroundNormal=41,44,48
-DecorationFocus=39,129,75
-DecorationHover=39,129,75
-ForegroundActive=39,129,75
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=61,174,233
 ForegroundInactive=161,169,177
-ForegroundLink=69,227,132
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=252,252,252
@@ -78,27 +77,27 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:Selection]
-BackgroundAlternate=33,96,59
-BackgroundNormal=33,96,59
-DecorationFocus=39,129,75
-DecorationHover=39,129,75
-ForegroundActive=39,129,75
-ForegroundInactive=255,255,255
-ForegroundLink=28,94,55
+BackgroundAlternate=30,87,116
+BackgroundNormal=61,174,233
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=252,252,252
+ForegroundInactive=161,169,177
+ForegroundLink=253,188,75
 ForegroundNegative=176,55,69
 ForegroundNeutral=198,92,0
-ForegroundNormal=255,255,255
+ForegroundNormal=252,252,252
 ForegroundPositive=23,104,57
 ForegroundVisited=155,89,182
 
 [Colors:Tooltip]
 BackgroundAlternate=32,35,38
 BackgroundNormal=41,44,48
-DecorationFocus=39,129,75
-DecorationHover=39,129,75
-ForegroundActive=39,129,75
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=61,174,233
 ForegroundInactive=161,169,177
-ForegroundLink=69,227,132
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=252,252,252
@@ -108,11 +107,11 @@ ForegroundVisited=155,89,182
 [Colors:View]
 BackgroundAlternate=29,31,34
 BackgroundNormal=20,22,24
-DecorationFocus=39,129,75
-DecorationHover=39,129,75
-ForegroundActive=39,129,75
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=61,174,233
 ForegroundInactive=161,169,177
-ForegroundLink=69,227,132
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=252,252,252
@@ -122,82 +121,29 @@ ForegroundVisited=155,89,182
 [Colors:Window]
 BackgroundAlternate=41,44,48
 BackgroundNormal=32,35,38
-DecorationFocus=39,129,75
-DecorationHover=39,129,75
-ForegroundActive=39,129,75
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=61,174,233
 ForegroundInactive=161,169,177
-ForegroundLink=69,227,132
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
-[DirSelect Dialog]
-DirSelectDialog Size=929,508
-History Items[$e]=file:$HOME/Games/Heroic,file:///mnt/HHD/Imágenes/Wallpapers,file:///mnt/virtmanager,file:$HOME,file:$HOME,file:$HOME/.bottles,file:$HOME/.bottles,file:$HOME/.bottles,file:$HOME/Games/Heroic,file:$HOME/Games/Heroic,file:$HOME/Games/Otros,file:$HOME/Games/Crisis Core,file:///mnt/HHD/Juegos/Repacks,file:$HOME/.appImages
-Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8e\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
-
 [General]
-AccentColor=39,129,75
-BrowserApplication=brave-origin.desktop
-ColorSchemeHash=7b61368c55eaab4075e7b1ae9501f3675b0f830f
-LastUsedCustomAccentColor=232,203,45
-XftAntialias=true
-XftHintStyle=hintslight
-XftSubPixel=rgb
-accentColorFromWallpaper=true
-fixed=BitstromWera Nerd Font,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1
-font=Bitstream Vera Sans,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=Bitstream Vera Sans,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=Bitstream Vera Sans,8,-1,0,400,0,0,0,0,0,0,0,0,0,0,1
-toolBarFont=Bitstream Vera Sans,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1
+ColorSchemeHash=35c73fb379a4940e5f22982a33078640b27cf788
 
 [KDE]
-AnimationDurationFactor=0.7071067811865475
-LookAndFeelPackage=org.kde.breezedark.desktop
-ShowDeleteCommand=false
+LookAndFeelPackage=org.fedoraproject.fedoradark.desktop
 contrast=4
 frameContrast=0.2
-
-[KFileDialog Settings]
-Allow Expansion=false
-Automatically select filename extension=true
-Breadcrumb Navigation=false
-Decoration position=2
-LocationCombo Completionmode=5
-PathCombo Completionmode=5
-Show Bookmarks=false
-Show Full Path=false
-Show Inline Previews=true
-Show Preview=false
-Show Speedbar=true
-Show hidden files=false
-Sort by=Name
-Sort directories first=true
-Sort hidden files last=false
-Sort reversed=false
-Speedbar Width=148
-View Style=Simple
-
-[PreviewSettings]
-EnableRemoteFolderThumbnail=false
-MaximumRemoteSize=0
-
-[Shortcuts]
-CreateFolder=; Ctrl+Shift+N
-Cut=Ctrl+X
-
-[Sounds]
-Theme=freedesktop
 
 [WM]
 activeBackground=39,44,49
 activeBlend=252,252,252
-activeFont=Bitstream Vera Sans,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1
 activeForeground=252,252,252
-frame=255,0,0          # Active window border (Red)
 inactiveBackground=32,36,40
 inactiveBlend=161,169,177
 inactiveForeground=161,169,177
-inactiveFrame=100,100,100 # Inactive window border (Gray)

@@ -3,10 +3,6 @@ HexLengths=3,6,9,12
 NamedColors=false
 PreviewAfterColor=true
 
-[FileDialogSize]
-2 screens: Height=519
-2 screens: Width=915
-
 [General]
 Allow Tab Scrolling=true
 Auto Hide Tabs=false
@@ -135,8 +131,8 @@ SetEditor=false
 [MainWindow]
 1920x1080 screen: Height=1010
 1920x1080 screen: Width=903
-2 screens: Height=1031
-2 screens: Width=943
+2 screens: Height=1004
+2 screens: Width=1900
 
 [UiSettings]
 ColorScheme=GruvboxColors

@@ -1,28 +1,6 @@
-MenuBar=Disabled
-
-[Baloo KEditCommentDialog]
-2 screens: Height=248
-2 screens: Width=274
-
-[ContextMenu]
-ShowCopyToOtherSplitView=false
-ShowDuplicateHere=false
-
-[DetailsMode]
-PreviewSize=32
-
-[ExtractDialog]
-2 screens: Height=540
-2 screens: Width=1280
-DirHistory[$e]=$HOME/Games/Otros/
-
 [General]
-ShowFullPath=true
 Version=202
-ViewPropsTimestamp=2026,7,24,23,57,51.312
-
-[IconsMode]
-PreviewSize=80
+ViewPropsTimestamp=2026,7,25,10,29,5.081
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -30,6 +8,3 @@ Places Icons Static Size=22
 
 [MainWindow]
 MenuBar=Disabled
-
-[PreviewSettings]
-Plugins=appimagethumbnail,cursorthumbnail,audiothumbnail,fontthumbnail,ffmpegthumbs,djvuthumbnail,directorythumbnail,kraorathumbnail,opendocumentthumbnail,windowsexethumbnail,imagethumbnail,windowsimagethumbnail,exrthumbnail,jpegthumbnail,svgthumbnail,comicbookthumbnail,ebookthumbnail

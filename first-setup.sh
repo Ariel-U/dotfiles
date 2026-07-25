@@ -4,19 +4,16 @@
 
 ## make backups
 mv -v ~/.config ~/.config.bak
-mkdir ~/.config
-
-
-# copy files whith rsync
-rsync -aAXv config/.config/ $HOME/.config/
-rsync -aAXv home/ $HOME/
+mv -v ~/.local ~/.local.bak
+mkdir -p ~/.config
+mkdir -p ~/.local/share
+mkdir -p ~/.local/bin
 
 ## use stow to link the dotfiles
 stow --adopt config
-stow --adopt home
 
 ## restore backups that are not in .dotfiles folder
 rsync -aAXv --ignore-existing --progress ~/.config.bak/ ~/.config/
 
 ## remove backups
-rm -rf ~/.config.bak
+#rm -rf ~/.config.bak

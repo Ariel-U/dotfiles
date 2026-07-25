@@ -70,7 +70,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 alias history="history 0"
 
-# Load completions
+# Load 
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 # Completion styling
@@ -79,6 +79,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu select
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+#zstyle ':fzf-tab:complete:(ls|cat|vi|nvim):*' fzf-preview 'bat --color=always $realpath'
 zstyle ':completion:*' insert-tab true
 setopt auto_cd
 
@@ -96,12 +97,6 @@ elif [ -f /bin/vim ]; then
     export EDITOR=/bin/vim
 fi
 
-
 export PATH="/home/$USER/.local/bin:$PATH"
-
-
-
-
-
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"

@@ -9,12 +9,16 @@ position=1536,803
 positionrule=4
 size=693,390
 sizerule=4
+skippager=true
+skippagerrule=3
+skipswitcher=true
+skipswitcherrule=3
 skiptaskbar=true
 skiptaskbarrule=3
-title=Pantalla en pantalla
+title=Imagen en imagen
 titlematch=3
 types=1
-wmclass=brave
+wmclass=brave brave
 wmclasscomplete=true
 
 [4b07b3d6-9635-4db0-a63d-c7ca95385c11]

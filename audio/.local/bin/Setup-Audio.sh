@@ -23,10 +23,10 @@ sudo cp /etc/sysctl.conf /etc/sysctl.conf.bak
 echo 'fs.inotify.max_user_watches=600000' | sudo tee -a /etc/sysctl.conf
 
 # modify pipewire latency
-cp /etc/pipewire/pipewire.conf /home/$USER/.config/pipewire/pipewire.conf
+#cp /etc/pipewire/pipewire.conf /home/$USER/.config/pipewire/pipewire.conf
 
-echo 'default.clock.max-quantum   = 256
-default.clock.min-quantum   = 128
-default.clock.rate          = 48000' | tee -a /home/$USER/.config/pipewire/pipewire.conf
+#echo 'default.clock.max-quantum   = 256
+#default.clock.min-quantum   = 128
+#default.clock.rate          = 48000' | tee -a /home/$USER/.config/pipewire/pipewire.conf
 
 echo 'done'
