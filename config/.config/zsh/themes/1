@@ -1,0 +1,7 @@
+#! /bin/zsh
+# Color prompt
+# Supported Colors: red, blue, green, cyan, yellow, magenta, black, & white. eg:
+autoload -U colors && colors
+# diferenciate user prompt from root
+PROMPT="%(!.%{$fg_bold[red]%}[%m@%n] %{$fg[white]%}[%~] %{$reset_color%}.%{$fg_bold[blue]%}[%n@%m] %{$fg[white]%}[%~] %{$reset_color%})
+%(?:%{$fg[white]%}%(!.# .>> )%{$reset_color%} :%{$fg[yellow]%}%(!.# .>> )%{$reset_color%})"

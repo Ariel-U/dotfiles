@@ -1,0 +1,14 @@
+<!DOCTYPE patchbay>
+<patchbay name="Reaper siempre por la placa de audio" version="0.9.7">
+ <items>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="REAPER" port="REAPER:out1"/>
+   <input node="PCM2902 Audio Codec Pro" port="USB Audio CODEC:playback_AUX0"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="REAPER" port="REAPER:out2"/>
+   <input node="PCM2902 Audio Codec Pro" port="USB Audio CODEC:playback_AUX1"/>
+  </item>
+ </items>
+</patchbay>
+
