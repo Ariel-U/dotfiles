@@ -1,19 +1,38 @@
 #!/usr/bin/env bash
 
-## EXPERIMENTAL
+# EXPERIMENTAL
+# Stops on fail
+set -euo pipefail
 
-## make backups
+# Make backups
 mv -v ~/.config ~/.config.bak
 mv -v ~/.local ~/.local.bak
 mkdir -p ~/.config
-mkdir -p ~/.local/share
+mkdir -p ~/.config/REAPER
+mkdir -p ~/.local/share/applications
 mkdir -p ~/.local/bin
 
-## use stow to link the dotfiles
+# Use stow to link the dotfiles
 stow --adopt config
 
-## restore backups that are not in .dotfiles folder
+# Restore backups that are not in .dotfiles folder
 rsync -aAXv --ignore-existing --progress ~/.config.bak/ ~/.config/
+rsync -aAXv --ignore-existing --progress ~/.local.bak/ ~/.local/
 
-## remove backups
-#rm -rf ~/.config.bak
+# Remove backups
+saltar=false
+echo "¿Borrar backups .local y .config? (s/N)"
+read -r respuesta
+if [[ "$respuesta" != "s" ]]; then
+	echo "manteniendo backups."
+    saltar=true
+fi
+
+if [[ "$saltar" != true ]]; then
+	rm -rf "$HOME/.config.bak"
+	rm -rf "$HOME/.local.bak"
+	echo "backups borrados"
+fi
+
+echo -e "done"
+return 0

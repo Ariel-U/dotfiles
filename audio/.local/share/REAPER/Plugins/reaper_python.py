@@ -77,13 +77,6 @@ def RPR_AddProjectMarker2(p0,p1,p2,p3,p4,p5,p6):
   r=f(t[0],t[1],t[2],t[3],t[4],t[5],t[6])
   return r
 
-def RPR_AddRegionOrMarker(p0,p1,p2,p3,p4,p5,p6):
-  a=_ft['AddRegionOrMarker']
-  f=CFUNCTYPE(c_uint64,c_uint64,c_byte,c_double,c_double,c_char_p,c_int,c_int)(a)
-  t=(rpr_packp('ReaProject*',p0),c_byte(p1),c_double(p2),c_double(p3),rpr_packsc(p4),c_int(p5),c_int(p6))
-  r=f(t[0],t[1],t[2],t[3],t[4],t[5],t[6])
-  return rpr_unpackp('ProjectMarker*',r)
-
 def RPR_AddRemoveReaScript(p0,p1,p2,p3):
   a=_ft['AddRemoveReaScript']
   f=CFUNCTYPE(c_int,c_byte,c_int,c_char_p,c_byte)(a)
@@ -373,18 +366,6 @@ def RPR_CreateTrackSend(p0,p1):
   t=(rpr_packp('MediaTrack*',p0),rpr_packp('MediaTrack*',p1))
   r=f(t[0],t[1])
   return r
-
-def RPR_CrossfadeEditor_OnCommand(p0):
-  a=_ft['CrossfadeEditor_OnCommand']
-  f=CFUNCTYPE(None,c_int)(a)
-  t=(c_int(p0),)
-  f(t[0])
-
-def RPR_CrossfadeEditor_Show(p0):
-  a=_ft['CrossfadeEditor_Show']
-  f=CFUNCTYPE(None,c_byte)(a)
-  t=(c_byte(p0),)
-  f(t[0])
 
 def RPR_CSurf_FlushUndo(p0):
   a=_ft['CSurf_FlushUndo']
@@ -1568,22 +1549,8 @@ def RPR_GetMIDIInputName(p0,p1,p2):
   r=f(t[0],t[1],t[2])
   return (r,p0,rpr_unpacks(t[1]),p2)
 
-def RPR_GetMIDIInputNameNoAlias(p0,p1,p2):
-  a=_ft['GetMIDIInputNameNoAlias']
-  f=CFUNCTYPE(c_byte,c_int,c_char_p,c_int)(a)
-  t=(c_int(p0),rpr_packs(p1),c_int(p2))
-  r=f(t[0],t[1],t[2])
-  return (r,p0,rpr_unpacks(t[1]),p2)
-
 def RPR_GetMIDIOutputName(p0,p1,p2):
   a=_ft['GetMIDIOutputName']
-  f=CFUNCTYPE(c_byte,c_int,c_char_p,c_int)(a)
-  t=(c_int(p0),rpr_packs(p1),c_int(p2))
-  r=f(t[0],t[1],t[2])
-  return (r,p0,rpr_unpacks(t[1]),p2)
-
-def RPR_GetMIDIOutputNameNoAlias(p0,p1,p2):
-  a=_ft['GetMIDIOutputNameNoAlias']
   f=CFUNCTYPE(c_byte,c_int,c_char_p,c_int)(a)
   t=(c_int(p0),rpr_packs(p1),c_int(p2))
   r=f(t[0],t[1],t[2])
@@ -1631,13 +1598,6 @@ def RPR_GetNumMIDIOutputs():
   a=_ft['GetNumMIDIOutputs']
   f=CFUNCTYPE(c_int)(a)
   r=f()
-  return r
-
-def RPR_GetNumRegionsOrMarkers(p0):
-  a=_ft['GetNumRegionsOrMarkers']
-  f=CFUNCTYPE(c_int,c_uint64)(a)
-  t=(rpr_packp('ReaProject*',p0),)
-  r=f(t[0])
   return r
 
 def RPR_GetNumTakeMarkers(p0):
@@ -1801,20 +1761,6 @@ def RPR_GetProjExtState(p0,p1,p2,p3,p4):
   t=(rpr_packp('ReaProject*',p0),rpr_packsc(p1),rpr_packsc(p2),rpr_packs(p3),c_int(p4))
   r=f(t[0],t[1],t[2],t[3],t[4])
   return (r,p0,p1,p2,rpr_unpacks(t[3]),p4)
-
-def RPR_GetRegionOrMarker(p0,p1,p2):
-  a=_ft['GetRegionOrMarker']
-  f=CFUNCTYPE(c_uint64,c_uint64,c_int,c_char_p)(a)
-  t=(rpr_packp('ReaProject*',p0),c_int(p1),rpr_packsc(p2))
-  r=f(t[0],t[1],t[2])
-  return rpr_unpackp('ProjectMarker*',r)
-
-def RPR_GetRegionOrMarkerInfo_Value(p0,p1,p2):
-  a=_ft['GetRegionOrMarkerInfo_Value']
-  f=CFUNCTYPE(c_double,c_uint64,c_uint64,c_char_p)(a)
-  t=(rpr_packp('ReaProject*',p0),rpr_packp('ProjectMarker*',p1),rpr_packsc(p2))
-  r=f(t[0],t[1],t[2])
-  return r
 
 def RPR_GetResourcePath():
   a=_ft['GetResourcePath']
@@ -1983,13 +1929,6 @@ def RPR_GetSetProjectNotes(p0,p1,p2,p3):
   f(t[0],t[1],t[2],t[3])
   return (p0,p1,rpr_unpacks(t[2]),p3)
 
-def RPR_GetSetRegionOrMarkerInfo_String(p0,p1,p2,p3,p4):
-  a=_ft['GetSetRegionOrMarkerInfo_String']
-  f=CFUNCTYPE(c_byte,c_uint64,c_uint64,c_char_p,c_char_p,c_byte)(a)
-  t=(rpr_packp('ReaProject*',p0),rpr_packp('ProjectMarker*',p1),rpr_packsc(p2),rpr_packs(p3),c_byte(p4))
-  r=f(t[0],t[1],t[2],t[3],t[4])
-  return (r,p0,p1,p2,rpr_unpacks(t[3]),p4)
-
 def RPR_GetSetRepeat(p0):
   a=_ft['GetSetRepeat']
   f=CFUNCTYPE(c_int,c_int)(a)
@@ -2016,13 +1955,6 @@ def RPR_GetSetTrackGroupMembership(p0,p1,p2,p3):
   f=CFUNCTYPE(c_int,c_uint64,c_char_p,c_int,c_int)(a)
   t=(rpr_packp('MediaTrack*',p0),rpr_packsc(p1),c_int(p2),c_int(p3))
   r=f(t[0],t[1],t[2],t[3])
-  return r
-
-def RPR_GetSetTrackGroupMembershipEx(p0,p1,p2,p3,p4):
-  a=_ft['GetSetTrackGroupMembershipEx']
-  f=CFUNCTYPE(c_int,c_uint64,c_char_p,c_int,c_int,c_int)(a)
-  t=(rpr_packp('MediaTrack*',p0),rpr_packsc(p1),c_int(p2),c_int(p3),c_int(p4))
-  r=f(t[0],t[1],t[2],t[3],t[4])
   return r
 
 def RPR_GetSetTrackGroupMembershipHigh(p0,p1,p2,p3):
@@ -2388,13 +2320,6 @@ def RPR_GetUnderrunTime(p0,p1,p2):
   f(byref(t[0]),byref(t[1]),byref(t[2]))
   return (int(t[0].value),int(t[1].value),int(t[2].value))
 
-def RPR_GetUserFileName(p0,p1,p2,p3,p4,p5):
-  a=_ft['GetUserFileName']
-  f=CFUNCTYPE(c_byte,c_int,c_char_p,c_char_p,c_char_p,c_char_p,c_int)(a)
-  t=(c_int(p0),rpr_packsc(p1),rpr_packsc(p2),rpr_packsc(p3),rpr_packs(p4),c_int(p5))
-  r=f(t[0],t[1],t[2],t[3],t[4],t[5])
-  return (r,p0,p1,p2,p3,rpr_unpacks(t[4]),p5)
-
 def RPR_GetUserFileNameForRead(p0,p1,p2):
   a=_ft['GetUserFileNameForRead']
   f=CFUNCTYPE(c_byte,c_char_p,c_char_p,c_char_p)(a)
@@ -2736,13 +2661,6 @@ def RPR_MB(p0,p1,p2):
   t=(rpr_packsc(p0),rpr_packsc(p1),c_int(p2))
   r=f(t[0],t[1],t[2])
   return r
-
-def RPR_MediaExplorerGetLastPlayedFileInfo(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10):
-  a=_ft['MediaExplorerGetLastPlayedFileInfo']
-  f=CFUNCTYPE(c_byte,c_char_p,c_int,c_void_p,c_void_p,c_void_p,c_void_p,c_void_p,c_void_p,c_void_p,c_char_p,c_int)(a)
-  t=(rpr_packs(p0),c_int(p1),c_int(p2),c_double(p3),c_double(p4),c_double(p5),c_double(p6),c_double(p7),c_double(p8),rpr_packs(p9),c_int(p10))
-  r=f(t[0],t[1],byref(t[2]),byref(t[3]),byref(t[4]),byref(t[5]),byref(t[6]),byref(t[7]),byref(t[8]),t[9],t[10])
-  return (r,rpr_unpacks(t[0]),p1,int(t[2].value),float(t[3].value),float(t[4].value),float(t[5].value),float(t[6].value),float(t[7].value),float(t[8].value),rpr_unpacks(t[9]),p10)
 
 def RPR_MediaItemDescendsFromTrack(p0,p1):
   a=_ft['MediaItemDescendsFromTrack']
@@ -3425,13 +3343,6 @@ def RPR_resolve_fn2(p0,p1,p2,p3):
   f(t[0],t[1],t[2],t[3])
   return (p0,rpr_unpacks(t[1]),p2,p3)
 
-def RPR_ResolveWildcards(p0,p1,p2,p3,p4):
-  a=_ft['ResolveWildcards']
-  f=CFUNCTYPE(None,c_uint64,c_double,c_char_p,c_char_p,c_int)(a)
-  t=(rpr_packp('ReaProject*',p0),c_double(p1),rpr_packsc(p2),rpr_packs(p3),c_int(p4))
-  f(t[0],t[1],t[2],t[3],t[4])
-  return (p0,p1,p2,rpr_unpacks(t[3]),p4)
-
 def RPR_ReverseNamedCommandLookup(p0):
   a=_ft['ReverseNamedCommandLookup']
   f=CFUNCTYPE(c_char_p,c_int)(a)
@@ -3477,13 +3388,6 @@ def RPR_SendMIDIMessageToHardware(p0,p1,p2):
   f=CFUNCTYPE(None,c_int,c_char_p,c_int)(a)
   t=(c_int(p0),rpr_packsc(p1),c_int(p2))
   f(t[0],t[1],t[2])
-
-def RPR_set_config_var_string(p0,p1,p2):
-  a=_ft['set_config_var_string']
-  f=CFUNCTYPE(c_int,c_char_p,c_char_p,c_int)(a)
-  t=(rpr_packsc(p0),rpr_packsc(p1),c_int(p2))
-  r=f(t[0],t[1],t[2])
-  return r
 
 def RPR_SetActiveTake(p0):
   a=_ft['SetActiveTake']
@@ -3693,13 +3597,6 @@ def RPR_SetProjExtState(p0,p1,p2,p3):
   a=_ft['SetProjExtState']
   f=CFUNCTYPE(c_int,c_uint64,c_char_p,c_char_p,c_char_p)(a)
   t=(rpr_packp('ReaProject*',p0),rpr_packsc(p1),rpr_packsc(p2),rpr_packsc(p3))
-  r=f(t[0],t[1],t[2],t[3])
-  return r
-
-def RPR_SetRegionOrMarkerInfo_Value(p0,p1,p2,p3):
-  a=_ft['SetRegionOrMarkerInfo_Value']
-  f=CFUNCTYPE(c_double,c_uint64,c_uint64,c_char_p,c_double)(a)
-  t=(rpr_packp('ReaProject*',p0),rpr_packp('ProjectMarker*',p1),rpr_packsc(p2),c_double(p3))
   r=f(t[0],t[1],t[2],t[3])
   return r
 
@@ -4130,13 +4027,6 @@ def RPR_TakeFX_GetParamNormalized(p0,p1,p2):
   t=(rpr_packp('MediaItem_Take*',p0),c_int(p1),c_int(p2))
   r=f(t[0],t[1],t[2])
   return r
-
-def RPR_TakeFX_GetParamSectionName(p0,p1,p2,p3,p4):
-  a=_ft['TakeFX_GetParamSectionName']
-  f=CFUNCTYPE(None,c_uint64,c_int,c_int,c_char_p,c_int)(a)
-  t=(rpr_packp('MediaItem_Take*',p0),c_int(p1),c_int(p2),rpr_packs(p3),c_int(p4))
-  f(t[0],t[1],t[2],t[3],t[4])
-  return (p0,p1,p2,rpr_unpacks(t[3]),p4)
 
 def RPR_TakeFX_GetPinMappings(p0,p1,p2,p3,p4):
   a=_ft['TakeFX_GetPinMappings']
@@ -4638,13 +4528,6 @@ def RPR_TrackFX_GetParamNormalized(p0,p1,p2):
   t=(rpr_packp('MediaTrack*',p0),c_int(p1),c_int(p2))
   r=f(t[0],t[1],t[2])
   return r
-
-def RPR_TrackFX_GetParamSectionName(p0,p1,p2,p3,p4):
-  a=_ft['TrackFX_GetParamSectionName']
-  f=CFUNCTYPE(None,c_uint64,c_int,c_int,c_char_p,c_int)(a)
-  t=(rpr_packp('MediaTrack*',p0),c_int(p1),c_int(p2),rpr_packs(p3),c_int(p4))
-  f(t[0],t[1],t[2],t[3],t[4])
-  return (p0,p1,p2,rpr_unpacks(t[3]),p4)
 
 def RPR_TrackFX_GetPinMappings(p0,p1,p2,p3,p4):
   a=_ft['TrackFX_GetPinMappings']

@@ -2,7 +2,7 @@
 -- LICENSE: LGPL v2 or later - http://www.gnu.org/licenses/lgpl.html
 
 sTitle = 'Default 7.0 Theme Adjuster'
-scriptVersion = 251214
+scriptVersion = 240503
 reaper.ClearConsole()
 
 OS = reaper.GetOS()
@@ -155,20 +155,66 @@ palette = {
 
 textPadding = 6
 
-  gfx.setfont(1, "Inter", 11)
-  gfx.setfont(2, "Inter", 13)
-  gfx.setfont(3, "Inter", 14)
-  gfx.setfont(4, "Inter", 18)
+if OS:find("Win") ~= nil then
+
+  gfx.setfont(1, "Calibri", 13)
+  gfx.setfont(2, "Calibri", 15)
+  gfx.setfont(3, "Calibri", 18)
+  gfx.setfont(4, "Calibri", 22)
   
-  gfx.setfont(5, "Inter", 16)
-  gfx.setfont(6, "Inter", 18)
-  gfx.setfont(7, "Inter", 23)
-  gfx.setfont(8, "Inter", 28)
+  gfx.setfont(5, "Calibri", 19)
+  gfx.setfont(6, "Calibri", 22)
+  gfx.setfont(7, "Calibri", 27)
+  gfx.setfont(8, "Calibri", 33)
   
-  gfx.setfont(9, "Inter", 22)
-  gfx.setfont(10, "Inter", 26)
-  gfx.setfont(11, "Inter", 28)
-  gfx.setfont(12, "Inter", 36)
+  gfx.setfont(9, "Calibri", 26)
+  gfx.setfont(10, "Calibri", 30)
+  gfx.setfont(11, "Calibri", 36)
+  gfx.setfont(12, "Calibri", 44)
+  
+  baselineShift = {}
+
+elseif OS == 'Other' then
+
+  gfx.setfont(1, "Ubuntu", 10)
+  gfx.setfont(2, "Ubuntu", 12)
+  gfx.setfont(3, "Ubuntu", 14)
+  gfx.setfont(4, "Ubuntu", 17)
+  
+  gfx.setfont(5, "Ubuntu", 13)
+  gfx.setfont(6, "Ubuntu", 15)
+  gfx.setfont(7, "Ubuntu", 20)
+  gfx.setfont(8, "Ubuntu", 24)
+  
+  gfx.setfont(9, "Ubuntu", 19)
+  gfx.setfont(10, "Ubuntu", 23)
+  gfx.setfont(11, "Ubuntu", 28)
+  gfx.setfont(12, "Ubuntu", 32)
+  
+  baselineShift = {}
+
+else
+
+  gfx.setfont(1, "Helvetica", 9)
+  gfx.setfont(2, "Helvetica", 11)
+  gfx.setfont(3, "Helvetica", 14)
+  gfx.setfont(4, "Helvetica", 16)
+  
+  gfx.setfont(5, "Helvetica", 13)
+  gfx.setfont(6, "Helvetica", 15)
+  gfx.setfont(7, "Helvetica", 18)
+  gfx.setfont(8, "Helvetica", 22)
+  
+  gfx.setfont(9, "Helvetica", 18)
+  gfx.setfont(10, "Helvetica", 20)
+  gfx.setfont(11, "Helvetica", 26)
+  gfx.setfont(12, "Helvetica", 30)
+  
+  baselineShift = {2,2,2,3,
+                   1,3,4,4,
+                   3,2,3,3}
+  
+end
 
 function translate(str)
   if type(str) == "string" and str ~= "" then
@@ -1351,7 +1397,7 @@ function ccControls:new(o)
   
   if o.label~=false then Label:new({parent=o, x=0, y=2, z=2, w=60, h=20, target=o.target, 
     text={str=o.target.desc, style=2, align=0, col=labelColMA, padding=0, resizeToFit=true, mouseOverCol=labelColMO } }) end
-  local readoutY = 2
+  local readoutY = 0
   if o.spinner ~= false then 
     SpinnerH:new({parent=o, x=4, y=-4, z=2, h=20, w=36, col={0,100,100,0}, flow=true, target=o.target}) 
   else readoutY = -4
@@ -1368,7 +1414,7 @@ function ccControls:new(o)
     end
     })
     
-  MiscAgent:new({parent=o, x=1, y=0, w=60, h=16, z=2, flow=true, target=o.target, text={str=o.target.units, style=1, align=8, col=readoutUnitCol, padding=0, resizeToFit=true},
+  MiscAgent:new({parent=o, x=1, y=0, w=60, h=20, z=2, flow=true, target=o.target, text={str=o.target.units, style=1, align=8, col=readoutUnitCol, padding=0, resizeToFit=true},
     onNewValue = function(k)
       local p = nil
       if k.target.valueAlias then
@@ -2349,6 +2395,26 @@ function El:arrange()
       end
     end
     
+    if self.elAlign then
+    
+      if self.elAlign.x then
+        local target = self.elAlign.x[1]
+        if self.elAlign.x[1]=='parent' then target = self.parent end
+        tx,tw = target.drawX or target.x, target.drawW or target.w 
+        if self.elAlign.x[2]=='centre' then self.drawX = tx+(tw/2)-(self.drawW/2)+ (self.x*scaleMult) end 
+        if self.elAlign.x[2]=='right' then self.drawX = tx + tw - self.drawW + (self.x*scaleMult) end
+      end
+      
+      if self.elAlign.y then
+        local target = self.elAlign.y[1]
+        if self.elAlign.y[1]=='parent' then target = self.parent end
+        ty,th = target.drawY or target.y, target.drawH or target.h
+        if self.elAlign.y[2]=='centre' then self.drawY = ty+(th/2)-(self.drawH/2)+self.y end
+        if self.elAlign.y[2]=='bottom' then reaper.ShowConsoleMsg('element align bottom not done yet\n') end
+      end
+  
+    end
+    
     --check final position, cull if outside parent
     if self.drawX > px+pw then -- fully to the right of parent
       self.drawW = 0 -- using zero width (instead of some kind of 'don't draw' state) so that dirtyCheck notices
@@ -2470,7 +2536,8 @@ function El:draw(offsX,offsY, clipR, clipB)
     if self.text.resizeToFit==true then p=0 end
     local tx,tw = x + p, w - 2*p
     local style = (self.text.style + textScaleOffs) or 1
-    text(self.text.str,tx,y,tw,h,self.text.align,self.text.col,style,self.text.lineSpacing,self.text.vCenter,self.text.wrap)
+    local thisBaselineShift = baselineShift[style] or 0
+    text(self.text.str,tx,y+thisBaselineShift,tw,h,self.text.align,self.text.col,style,self.text.lineSpacing,self.text.vCenter,self.text.wrap)
   end
  
   if self.drawImg ~= nil and self.w ~= 0 then
@@ -3184,7 +3251,7 @@ function Populate()
     text={str='Reload theme in REAPER', style=2, align=0, padding=0, resizeToFit=true, col=labelColMA, mouseOverCol=labelColMO },
     onClick=function(k) k.target:onClick() end })
   
-  El:new({parent=debugBox, flow = true, x=6, w=300, y=0, h=16,  text={str=translate('Operating System : ')..OS, style=2, align=0, col=c_Grey60} })
+  El:new({parent=debugBox, flow = true, x=6, w=300, y=0, h=16,  text={str='Operating System : '..OS, style=2, align=0, col=c_Grey60} }) 
   RVerDisplay = El:new({parent=debugBox, flow = true, x=6, w=300, y=0, h=16, toolTip='REAPER version', 
     text={str= translate('REAPER version : ')..reaper.GetAppVersion(), style=2, align=0, col=c_Grey60}
     })
@@ -3308,9 +3375,9 @@ function Populate()
     text={str="Attempt to use the Default 7.0 theme\'s controls", style=2, align=0, padding=0, resizeToFit=true, col=labelColMA, mouseOverCol=labelColMO },
     onClick=function(k) k.target:onClick() end })
   
-  El:new({parent=genDebugBox, flow = true, x=6, w=300, y=6, h=16,  text={str=translate('Operating System : ')..OS, style=2, align=0, col=c_Grey60} })
+  El:new({parent=genDebugBox, flow = true, x=6, w=300, y=6, h=16,  text={str=translate('Operating System : ')..OS, style=2, align=0, col=c_Grey60} }) 
   RVerDisplayGeneric = El:new({parent=genDebugBox, flow = true, x=6, w=300, y=4, h=16, toolTip='REAPER version', col={0,0,0,0},
-    text={str=translate('REAPER version : ')..reaper.GetAppVersion(), style=2, align=0, col=c_Grey60}
+    text={str='REAPER version : '..reaper.GetAppVersion(), style=2, align=0, col=c_Grey60}
     })
   
   Button:new({parent=genDebugBox, x=10, y=6, flow=true, style='button', target=displayRedrawsController, img='button_off', imgOn='button_on', iType=3 })
@@ -3579,12 +3646,12 @@ function Populate()
   El:new({parent=tcpVisFlagDiags, x=41, y=172, w=42, h=22, img='tcp_panwidth', interactive=false })
   El:new({parent=tcpVisFlagDiags, x=41, y=201, w=42, h=22, img='tcp_recmode', interactive=false })
   El:new({parent=tcpVisFlagDiags, x=6, y=229, w=20, h=22, img='tcp_infx', interactive=false })
-  El:new({parent=tcpVisFlagDiags, x=26, y=229, w=31, h=20, col={0,0,0,64}, interactive=false })
+  El:new({parent=tcpVisFlagDiags, x=26, y=229, w=31, h=20, col={0,0,0,38}, interactive=false })
   El:new({parent=tcpVisFlagDiags, x=57, y=229, w=26, h=22, img='tcp_recinput', interactive=false })
-  El:new({parent=tcpVisFlagDiags, x=43, y=255, w=40, h=22, img='tcp_env', interactive=false })
-  El:new({parent=tcpVisFlagDiags, x=67, y=283, w=16, h=22, img='tcp_phase', interactive=false })
-  El:new({parent=tcpVisFlagDiags, x=2, y=306, w=87, h=28, text={style=1, align=6, str='Labels & Values', wrap=true, col=c_Grey15}, interactive=false })
-  El:new({parent=tcpVisFlagDiags, x=2, y=336, w=87, h=28, text={style=1, align=6, str='Meter Values', wrap=true, col=c_Grey15}, interactive=false })
+  El:new({parent=tcpVisFlagDiags, x=43, y=257, w=40, h=22, img='tcp_env', interactive=false })
+  El:new({parent=tcpVisFlagDiags, x=67, y=285, w=16, h=22, img='tcp_phase', interactive=false })
+  El:new({parent=tcpVisFlagDiags, x=6, y=309, w=77, h=28, text={style=1, align=6, str='Labels & Values', wrap=true, col=c_Grey15}, interactive=false })
+  El:new({parent=tcpVisFlagDiags, x=6, y=337, w=77, h=28, text={style=1, align=6, str='Meter Values', wrap=true, col=c_Grey15}, interactive=false })
   
   tcpVisFlagRow:new({parent=tcpVisflagTableBox, x=89, y=53, paramDesc = 'Visflag Track Label Block', rowStyle='odd'}) 
   tcpVisFlagRow:new({parent=tcpVisflagTableBox, x=89, flow=true, paramDesc = 'Visflag Track Recmon', rowStyle='even'}) 
@@ -3598,13 +3665,14 @@ function Populate()
   tcpVisFlagRow:new({parent=tcpVisflagTableBox, x=89, flow=true, paramDesc = 'Visflag Track Phase', rowStyle='even'}) 
   tcpVisFlagRow:new({parent=tcpVisflagTableBox, x=89, flow=true, paramDesc = 'Visflag Track Labels and Values', rowStyle='odd'}) 
   tcpVisFlagRow:new({parent=tcpVisflagTableBox, x=89, flow=true, paramDesc = 'Visflag Track Meter Values', rowStyle='even'})
+  
 
   
     
   tcpOneLayoutBox = El:new({parent=bodyBox, x=0, y=0, tile=true, w=500, h=364, col=c_CyanGrey }) 
   TitleBar:new({parent=tcpOneLayoutBox, x=0, y=0, text={str='Track Panel'} }) 
   
-  tcpVolLabelSect = El:new({parent=tcpOneLayoutBox, x=0, y=0, border=6, flow=true, w=480, h=114, col={0,255,255,0} }) -- zero opacity color
+  tcpVolLabelSect = El:new({parent=tcpOneLayoutBox, x=0, y=0, border=10, flow=true, w=480, h=120, col={0,255,255,0} }) -- zero opacity color
   tcpLabelSizeController = Controller:new({parent=tcpVolLabelSect, x=40, y=0, w=6, h=6, paramDesc = 'TCP Label Font Size', units = '', desc='Label Font Size' })
   tcpVolLengthController = Controller:new({parent=tcpVolLabelSect, x=30, y=0, w=6, h=6, paramDesc='TCP Volume Length', desc = 'Volume Length', units = 'px',
     valueAlias = {[40] = 'Knob'}  })
@@ -3612,7 +3680,7 @@ function Populate()
 
   fontControl:new({parent=tcpVolLabelSect, target=tcpLabelSizeController, x=26, y=0, border=0, w=480, h=22, colMatch='c_CyanGrey', col={100,0,255,0} }) -- zero opacity color
   
-  tcpLabelDiag = MiscAgent:new({parent=tcpVolLabelSect, target=tcpLabelLengthController, x=0, y=26, w=100, h=24, interactive=false, 
+  tcpLabelDiag = MiscAgent:new({parent=tcpVolLabelSect, target=tcpLabelLengthController, x=0, y=30, w=100, h=24, interactive=false, 
     onNewValue = function(k)
         k.w = k.target.paramV + 16
         tcpVolDiag.x = k.x+k.w
@@ -3638,7 +3706,7 @@ function Populate()
       text={str='Track Name can be long, actually very very long, even longer than this, which is really quite long indeed', style=3, align=4, padding=0, col={180,180,180}} })
     El:new({parent=tcpLabelDiag, x=2, y=2, w=22, h=22, img='round22_nonInteractive', interactive=false }) 
   
-  tcpVolDiag = MiscAgent:new({parent=tcpVolLabelSect, target=tcpVolLengthController, x=0, y=26, w=-12, r=nil, h=24, interactive=false, 
+  tcpVolDiag = MiscAgent:new({parent=tcpVolLabelSect, target=tcpVolLengthController, x=0, y=30, w=-12, r=nil, h=24, interactive=false, 
     onNewValue = function(k)
       k.r = nil
       if k.target.paramV==40 then
@@ -3673,10 +3741,10 @@ function Populate()
     El:new({parent=tcpVolDiag, x=50, y=-2, w=20, h=28, img='slider_nonInteractive', interactive=false }) 
     
 
-  tcpVolLengthTape = TapeMeasure:new({parent=tcpVolLabelSect, target=tcpVolLengthController, x=0, y=54, z=2, tape={zeroAtV=40, colMatch='c_CyanGrey'}, w=0, h=20,  r={toEdge, tcpOneLayoutBox, 'right'}, interactive = false })  
-  TapeMeasure:new({parent=tcpVolLabelSect, target=tcpLabelLengthController, x=26, y=84, z=2, tape={colMatch='c_CyanGrey'}, w=0, h=20,  r={toEdge, tcpOneLayoutBox, 'right'}, interactive = false })
+  tcpVolLengthTape = TapeMeasure:new({parent=tcpVolLabelSect, target=tcpVolLengthController, x=0, y=62, z=2, tape={zeroAtV=40, colMatch='c_CyanGrey'}, w=0, h=20,  r={toEdge, tcpOneLayoutBox, 'right'}, interactive = false })  
+  TapeMeasure:new({parent=tcpVolLabelSect, target=tcpLabelLengthController, x=26, y=92, z=2, tape={colMatch='c_CyanGrey'}, w=0, h=20,  r={toEdge, tcpOneLayoutBox, 'right'}, interactive = false })
   
-  tcpLabelVolOversize = MiscAgent:new({parent=tcpVolLabelSect, target=tcpLabelLengthController, x=370, y=26, z=2, w=0, h=96,  
+  tcpLabelVolOversize = MiscAgent:new({parent=tcpVolLabelSect, target=tcpLabelLengthController, x=370, y=30, z=2, w=0, h=96,  
      col=c_CyanGrey, shape='gradient', colA={c_CyanGrey[1],c_CyanGrey[2],c_CyanGrey[3],0}, colB={c_CyanGrey[1],c_CyanGrey[2],c_CyanGrey[3],255}, deg=0,
     onNewValue = function(k)
       if k.target.paramV and tcpVolLengthController.paramV and (k.target.paramV + (tcpVolLengthController.paramV or 0))>434 then k.w=100
@@ -3684,31 +3752,30 @@ function Populate()
       end
     end })
     
-  tcpVolLengthControls = ccControls:new({parent=tcpVolLabelSect, x=30, y=60, colMatch='c_CyanGrey', target=tcpVolLengthController  })
-  ccControls:new({parent=tcpVolLabelSect, x=56, y=90, colMatch='c_CyanGrey', target=tcpLabelLengthController })
+  tcpVolLengthControls = ccControls:new({parent=tcpVolLabelSect, x=30, y=68, colMatch='c_CyanGrey', target=tcpVolLengthController  })
+  ccControls:new({parent=tcpVolLabelSect, x=56, y=98, colMatch='c_CyanGrey', target=tcpLabelLengthController })
   
-  tcpInfoBlockSect = El:new({parent=tcpOneLayoutBox, x=0, y=0, border=0, flow=true, w=500, h=31, col=c_Grey20 }) 
-  ToggleButton:new({parent=tcpInfoBlockSect, x=6, y=2, w=480, h=20, flow=true, paramDesc = 'TCP use InfoBlock', desc='Use InfoBlock (takes over the reordering slot of volume label)' }) 
+  El:new({parent=tcpOneLayoutBox, x=0, y=6, w=500, h=1, col={0,0,0,80}, flow=true, interactive = false })
   
-  tcpInSect = El:new({parent=tcpOneLayoutBox, x=0, y=0, border=6, flow=true, w=480, h=80, col={255,0,255,0} }) -- zero opacity color
+  tcpInSect = El:new({parent=tcpOneLayoutBox, x=0, y=0, border=10, flow=true, w=480, h=90, col={255,0,255,0} }) -- zero opacity color
   tcpInLengthController = Controller:new({parent=tcpInSect, x=40, y=0, w=6, h=6, paramDesc = 'TCP Input Length', units = 'px', desc='Input Length' })
   tcpInFontController = Controller:new({parent=tcpInSect, x=40, y=0, w=6, h=6, paramDesc = 'TCP Input Font Size', units = '', desc='Input Font Size' })
   fontControl:new({parent=tcpInSect, target=tcpInFontController, x=26, y=0, border=0, w=480, h=22, colMatch='c_CyanGrey' }) 
   
-  tcpInDiag = MiscAgent:new({parent=tcpInSect, target=tcpInLengthController, x=0, y=26, w=480, h=24, interactive=false, 
+  tcpInDiag = MiscAgent:new({parent=tcpInSect, target=tcpInLengthController, x=0, y=30, w=480, h=24, interactive=false, 
     onNewValue = function(k)
         k.w = k.target.paramV + 40
       k.isDirty, doArrange = true, true
     end
     })
     El:new({parent=tcpInDiag, x=0, y=0, w=20, h=20, img='tcpInFx_nonInteractive', interactive=false })
-    El:new({parent=tcpInDiag, x=20, y=0, w=-20, h=20, col={0,0,0,64}, r={toEdge, tcpInDiag, 'right'}, interactive=false,
+    El:new({parent=tcpInDiag, x=20, y=0, w=-20, h=20, col={0,0,0,34}, r={toEdge, tcpInDiag, 'right'}, interactive=false,
       text={str='Input Name can be long, actually very very long, even longer than this, which is really quite long indeed', style=1, align=4, padding=0, col={235,235,235}} })
     El:new({parent=tcpInDiag, x=0, y=0, w=20, h=20, flow=true, img='tcpDrop_nonInteractive', interactive=false })
     
     
-  TapeMeasure:new({parent=tcpInSect, target=tcpInLengthController, x=20, y=52, z=2, tape={colMatch='c_CyanGrey'}, w=0, h=20,  r={toEdge, tcpInSect, 'right'}, interactive = false })  
-  ccControls:new({parent=tcpInSect, x=50, y=58, z=2, colMatch='c_CyanGrey', target=tcpInLengthController })
+  TapeMeasure:new({parent=tcpInSect, target=tcpInLengthController, x=20, y=58, z=2, tape={colMatch='c_CyanGrey'}, w=0, h=20,  r={toEdge, tcpInSect, 'right'}, interactive = false })  
+  ccControls:new({parent=tcpInSect, x=50, y=64, z=2, colMatch='c_CyanGrey', target=tcpInLengthController })
     
   
   tcpMeterBox = El:new({parent=tcpOneLayoutBox, x=0, y=2, w=500, h=100, flow=true, col=c_Grey10, interactive=false })

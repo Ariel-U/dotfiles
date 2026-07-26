@@ -11,6 +11,7 @@ alias home="cd ~"
 alias c="clear"
 alias e="exit"
 alias h="history"
+alias dotfiles="cd $HOME/.dotfiles"
 alias sz="source ~/.zshrc"
 alias sb="source ~/.bashrc"
 alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
@@ -91,6 +92,7 @@ if [ -f /usr/bin/dnf ]; then
   alias {upgrade,actualizar}='sudo dnf upgrade -y'
   alias {install,instalar}='sudo dnf install'
   alias {remove,remover}="sudo dnf remove"
+  alias autoremove="sudo dnf autoremove"
   alias {search,buscar}="dnf search"
 fi
 
