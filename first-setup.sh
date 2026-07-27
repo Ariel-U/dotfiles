@@ -5,16 +5,16 @@
 set -euo pipefail
 
 # Make backups
-mv -v ~/.config ~/.config.bak
-mv -v ~/.local ~/.local.bak
+for file in $HOME/.{bashrc,aliases,zshrc,vimrc,tmux.conf,nanorc,p10k.zsh}; do
+    [[ -f "$file" ]] && mv -vi "$file" "$file.bak"
+done
+
+mv -vf ~/.config ~/.config.bak
+mv -vf ~/.local ~/.local.bak
 mkdir -p ~/.config
 mkdir -p ~/.config/REAPER
 mkdir -p ~/.local/share/applications
 mkdir -p ~/.local/bin
-for file in $HOME/.{bashrc,aliases,zshrc,vimrc,tmux.conf,nanorc,p10k.zsh}
-do
-    mv -vi $file $file.bak
-done
 
 # Use stow to link the dotfiles
 stow config shell
