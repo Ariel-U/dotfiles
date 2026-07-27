@@ -17,6 +17,7 @@ PreviewSize=32
 DirHistory[$e]=$HOME/Games/Otros/
 
 [General]
+DynamicView=true
 ShowFullPath=true
 Version=202
 ViewPropsTimestamp=2025,10,26,0,56,14.744
@@ -32,4 +33,4 @@ Places Icons Static Size=22
 MenuBar=Disabled
 
 [PreviewSettings]
-Plugins=appimagethumbnail,cursorthumbnail,audiothumbnail,fontthumbnail,ffmpegthumbs,djvuthumbnail,directorythumbnail,kraorathumbnail,opendocumentthumbnail,windowsexethumbnail,imagethumbnail,windowsimagethumbnail,exrthumbnail,jpegthumbnail,svgthumbnail,comicbookthumbnail,ebookthumbnail
+Plugins=cursorthumbnail,audiothumbnail,fontthumbnail,ffmpegthumbs,djvuthumbnail,directorythumbnail,kraorathumbnail,opendocumentthumbnail,windowsexethumbnail,imagethumbnail,windowsimagethumbnail,exrthumbnail,jpegthumbnail,svgthumbnail,comicbookthumbnail,ebookthumbnail

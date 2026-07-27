@@ -38,42 +38,12 @@ location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
-[Containments][114][Applets][118]
-immutability=1
-plugin=org.kde.plasma.marginsseparator
-
-[Containments][114][Applets][118][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][114][Applets][134]
-immutability=1
-plugin=org.kde.plasma.digitalclock
-
-[Containments][114][Applets][134][Configuration]
-popupHeight=451
-popupWidth=810
-
-[Containments][114][Applets][134][Configuration][Appearance]
-autoFontAndSize=false
-dateDisplayFormat=BesideTime
-dateFormat=custom
-enabledCalendarPlugins=holidaysevents
-fontFamily=Bitstream Vera Sans
-fontStyleName=Roman
-fontWeight=400
-use24hFormat=2
-
-[Containments][114][Applets][134][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
 [Containments][114][Applets][140]
 immutability=1
 plugin=org.kde.plasma.weather
 
 [Containments][114][Applets][140][Configuration]
-popupHeight=305
+popupHeight=353
 popupWidth=708
 
 [Containments][114][Applets][140][Configuration][Appearance]
@@ -99,7 +69,7 @@ DialogWidth=720
 
 [Containments][114][Applets][183][Configuration][General]
 hideLauncherOnStart=false
-launchers=applications:brave-origin.desktop,applications:app.zen_browser.zen.desktop,applications:youtube-music-desktop-app.desktop
+launchers=applications:brave-origin.desktop,applications:app.zen_browser.zen.desktop
 middleClickAction=Close
 taskMaxWidth=Wide
 
@@ -198,9 +168,9 @@ DialogHeight=772
 DialogWidth=1051
 
 [Containments][114][Applets][192][General]
-disabledStatusNotifiers=Pasarela de vídeo Xwayland,chrome_status_icon_1@youtube-music-d,Yakuake
+disabledStatusNotifiers=Pasarela de vídeo Xwayland,chrome_status_icon_1@youtube-music-d,Yakuake,tidal-hifi_status_icon_1
 extraItems=org.kde.kdeconnect,org.kde.plasma.volume,org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.brightness
-hiddenItems=Pasarela de vídeo Xwayland_pipewireToXProxy,org.kde.plasma.battery,org.kde.plasma.clipboard
+hiddenItems=Pasarela de vídeo Xwayland_pipewireToXProxy,org.kde.plasma.battery,org.kde.plasma.clipboard,com.arn.scrobble.tray
 knownItems=org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.mediacontroller,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kscreen,org.kde.plasma.clipboard,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.manage-inputmethod,org.kde.plasma.weather
 shownItems=org.kde.plasma.brightness
 
@@ -209,7 +179,7 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][114][Applets][233][Configuration]
-popupHeight=514
+popupHeight=573
 popupWidth=738
 
 [Containments][114][Applets][233][Configuration][ConfigDialog]
@@ -236,8 +206,49 @@ showOnlyCurrentScreen=true
 showWindowOutlines=false
 wrapPage=false
 
+[Containments][114][Applets][275]
+immutability=1
+plugin=org.kde.plasma.digitalclock
+
+[Containments][114][Applets][275][Configuration]
+popupHeight=550
+popupWidth=810
+
+[Containments][114][Applets][275][Configuration][Appearance]
+autoFontAndSize=false
+customDateFormat=ddd d -
+dateDisplayFormat=BesideTime
+dateFormat=custom
+enabledCalendarPlugins=holidaysevents
+fontFamily=Bitstream Vera Sans
+fontStyleName=Roman
+fontWeight=400
+segmentOrder=day,time
+showDay=true
+use24hFormat=2
+
+[Containments][114][Applets][275][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][114][Applets][277]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
+
+[Containments][114][Applets][278]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
+
+[Containments][114][Applets][280]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
+
+[Containments][114][Applets][281]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
+
 [Containments][114][General]
-AppletOrder=233;261;183;118;140;192;134
+AppletOrder=233;278;261;277;183;280;140;192;281;275
 
 [Containments][236]
 activityId=
@@ -258,6 +269,7 @@ popupWidth=810
 
 [Containments][236][Applets][238][Configuration][Appearance]
 autoFontAndSize=false
+customDateFormat=ddd d -
 dateDisplayFormat=BesideTime
 dateFormat=custom
 enabledCalendarPlugins=holidaysevents
@@ -325,7 +337,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][269][Wallpaper][org.kde.image][General]
-Image=/mnt/HHD/Imágenes/Wallpapers/Dibujo-Render/hotline-miami.jpg
+Image=/home/ariel/Imágenes/Wallpapers/Juegos/planets_upscayl_2x_upscayl-standard-4x.png
 
 [Containments][270]
 ItemGeometries-1920x1080=
@@ -339,7 +351,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][270][Wallpaper][org.kde.image][General]
-Image=/mnt/HHD/Imágenes/Wallpapers/Dibujo-Render/hotline-miami.jpg
+Image=/home/ariel/Imágenes/Wallpapers/Juegos/planets_upscayl_2x_upscayl-standard-4x.png
 
 [Containments][46][Wallpaper][org.kde.image][General]
 Image=file:///usr/share/wallpapers/Next/
@@ -371,4 +383,4 @@ immutability=1
 
 [ScreenMapping]
 itemsOnDisabledScreens=0,72e1ccb5-40b2-4b57-93d7-76705bd3d7ab,1,desktop:/io.github.ryubing.Ryujinx.desktop
-screenMapping=
+screenMapping=desktop:/brave-cinhimbnkkaeohfgghhklpknlkffjgod-Default.desktop,0,2a4ab593-cd55-4eaa-b9a8-c48d958a5574

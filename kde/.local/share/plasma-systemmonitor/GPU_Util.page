@@ -384,7 +384,7 @@ showLegend=
 lineChartStacked=
 
 [page]
-Title=Performance
+Title=Rendimiento
 actionsFace=
 icon=battery-profile-performance
 loadType=ondemand

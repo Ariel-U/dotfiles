@@ -11,9 +11,13 @@ mkdir -p ~/.config
 mkdir -p ~/.config/REAPER
 mkdir -p ~/.local/share/applications
 mkdir -p ~/.local/bin
+for file in $HOME/.{bashrc,aliases,zshrc,vimrc,tmux.conf,nanorc,p10k.zsh}
+do
+    mv -vi $file $file.bak
+done
 
 # Use stow to link the dotfiles
-stow --adopt config
+stow config shell
 
 # Restore backups that are not in .dotfiles folder
 rsync -aAXv --ignore-existing --progress ~/.config.bak/ ~/.config/

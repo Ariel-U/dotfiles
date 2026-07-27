@@ -14,7 +14,10 @@ alias h="history"
 alias dotfiles="cd $HOME/.dotfiles"
 alias sz="source ~/.zshrc"
 alias sb="source ~/.bashrc"
-alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
+alias zshrc="$EDITOR $HOME/.zshrc"
+alias al="$EDITOR $HOME/.aliases"
+alias latencia="pw-metadata -n settings 0 clock.force-quantum" # latencia de pipewire
+
 
 # systemd
 alias status="systemctl status"
@@ -56,7 +59,7 @@ fi
 # gestión de paquetes
 ## yay
 
-# pacman
+# Arch
 if [ -f /usr/bin/pacman ]; then
     alias {update,refrescar}="sudo pacman -Syy"
     alias {upgrade,actualizar}="sudo pacman -Syu --noconfirm ;yay -Syu --noconfirm; if [ -f /usr/bin/flatpak ] ; then flatpak update -y ; fi" # actualiza sin pedir confirmación para instalar
@@ -75,7 +78,7 @@ if [ -f /usr/bin/pacman ]; then
     alias yay="yay --aur"
 fi
 
-## apt
+## Debian
 if [ -f /usr/bin/apt ]; then
   alias {update,refrescar}='sudo apt update'
   alias {upgrade,actualizar}='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y ; if [ -f /usr/bin/flatpak ] ; then flatpak update -y ; fi' # actualiza sin pedir confirmación para instalar
@@ -87,7 +90,7 @@ if [ -f /usr/bin/apt ]; then
   alias is="apt list --installed | grep"
 fi
 
-## dnf
+## Fedora
 if [ -f /usr/bin/dnf ]; then
   alias {upgrade,actualizar}='sudo dnf upgrade -y'
   alias {install,instalar}='sudo dnf install'
@@ -97,17 +100,23 @@ if [ -f /usr/bin/dnf ]; then
 fi
 
 # flags en comandos que facilitan la vida
+
+if [ -f /usr/bin/dnf ]; then
+	alias update-grub="grub2-mkconfig -o /boot/grub2/grub.cfg"
+else
+	alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
+fi
+
 alias rsync="rsync -aAXv --progress"
 alias ping="ping -c 5"
-alias matrix="unimatrix -s 95"
-# pipewire
-alias latencia="pw-metadata -n settings 0 clock.force-quantum" 
+alias cmatrix="unimatrix -s 95"
 #scrcpy
 alias motog04='scrcpy -KwS --screen-off-timeout=3600 --tcpip=192.168.100.140:5555'
-# permite ejecutar aliases con sudo
-alias sudo="sudo "
+
+
 
 # sudo en comandos recurrentes
+#alias sudo="sudo " # permite ejecutar aliases con sudo
 alias mount="sudo mount"
 alias umount="sudo umount"
 alias blkid="sudo blkid"

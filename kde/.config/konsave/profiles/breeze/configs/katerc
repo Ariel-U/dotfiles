@@ -132,7 +132,7 @@ SetEditor=false
 1920x1080 screen: Height=1010
 1920x1080 screen: Width=903
 2 screens: Height=1004
-2 screens: Width=1900
+2 screens: Width=945
 
 [UiSettings]
 ColorScheme=GruvboxColors
@@ -152,7 +152,7 @@ viewShade=77,46,91
 AllowedServerCommandLines=
 AutoHover=true
 AutoImport=true
-BlockedServerCommandLines=
+BlockedServerCommandLines=/usr/bin/bash-language-server start
 CompletionDocumentation=true
 CompletionParens=true
 Diagnostics=true

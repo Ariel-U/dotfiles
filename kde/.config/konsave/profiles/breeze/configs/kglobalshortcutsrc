@@ -281,7 +281,7 @@ Window to Screen 4=none,none,Mover ventana a la pantalla 4
 Window to Screen 5=none,none,Mover ventana a la pantalla 5
 Window to Screen 6=none,none,Mover ventana a la pantalla 6
 Window to Screen 7=none,none,Mover ventana a la pantalla 7
-_k_friendly_name=Preferencias del sistema
+_k_friendly_name=KWin
 disableInputCapture=Meta+Shift+Esc,Meta+Shift+Esc,Desactivar la captura de la entrada activa
 view_actual_size=Meta+0,Meta+0,Ampliar al tamaño real
 view_zoom_in=Meta+=,Meta++\tMeta+=,Ampliar
@@ -346,6 +346,7 @@ activate widget 183=none,none,Activar el elemento gráfico Gestor de tareas con 
 activate widget 198=Meta+Ctrl+V,none,Activar el elemento gráfico Volumen del sonido
 activate widget 233=Meta,none,Activar el elemento gráfico Lanzador de aplicaciones
 activate widget 261=none,none,Activar el elemento gráfico Paginador
+activate widget 275=none,none,Activar el elemento gráfico Reloj digital
 activate widget 4=none,none,Activar el elemento gráfico Lanzador de aplicaciones
 activate widget 56=none,none,Activar el elemento gráfico Reloj digital
 activate widget 59=none,none,Activar el elemento gráfico Gestor de tareas con iconos y texto
@@ -404,6 +405,10 @@ _launch=none
 
 [services][org.kde.konsole.desktop]
 _launch=Meta+Return
+
+[services][org.kde.spectacle.desktop]
+CurrentMonitorScreenShot=none
+OpenWithoutScreenshot=none
 
 [yakuake]
 _k_friendly_name=Yakuake

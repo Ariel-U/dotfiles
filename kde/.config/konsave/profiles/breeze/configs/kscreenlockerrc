@@ -5,5 +5,5 @@ RequirePassword=false
 Timeout=0
 
 [Greeter][Wallpaper][org.kde.image][General]
-Image=/mnt/HHD/Imágenes/Wallpapers/Dibujo-Render/hotline-miami.jpg
-PreviewImage=/mnt/HHD/Imágenes/Wallpapers/Dibujo-Render/hotline-miami.jpg
+Image=/home/ariel/Imágenes/Wallpapers/Juegos/planets_upscayl_2x_upscayl-standard-4x.png
+PreviewImage=/home/ariel/Imágenes/Wallpapers/Juegos/planets_upscayl_2x_upscayl-standard-4x.png
