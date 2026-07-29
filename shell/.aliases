@@ -100,13 +100,12 @@ if [ -f /usr/bin/dnf ]; then
 fi
 
 # flags en comandos que facilitan la vida
-
 if [ -f /usr/bin/dnf ]; then
 	alias update-grub="grub2-mkconfig -o /boot/grub2/grub.cfg"
 else
 	alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
 fi
-
+alias topgrade="topgrade -y"
 alias rsync="rsync -aAXv --progress"
 alias ping="ping -c 5"
 alias cmatrix="unimatrix -s 95"

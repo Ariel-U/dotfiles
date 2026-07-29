@@ -1,0 +1,164 @@
+[ColorEffects:Disabled]
+ChangeSelectionColor=
+Color=56,56,56
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
+Enable=
+IntensityAmount=0.1
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=false
+Color=112,111,110
+ColorAmount=-0.9500000000000001
+ColorEffect=0
+ContrastAmount=0.1
+ContrastEffect=0
+Enable=true
+IntensityAmount=0
+IntensityEffect=0
+inactiveFrame=100,100,100 # Inactive window border (Gray)
+
+[Colors:Button]
+BackgroundAlternate=170,80,45
+BackgroundNormal=50,62,79
+DecorationFocus=222,88,31
+DecorationHover=222,88,31
+ForegroundActive=222,88,31
+ForegroundInactive=252,253,253
+ForegroundLink=253,189,178
+ForegroundNegative=67,205,189
+ForegroundNeutral=95,125,205
+ForegroundNormal=254,254,254
+ForegroundPositive=156,83,198
+ForegroundVisited=127,140,141
+
+[Colors:Complementary]
+BackgroundAlternate=44,55,70
+BackgroundNormal=44,55,70
+DecorationFocus=222,88,31
+DecorationHover=222,88,31
+ForegroundActive=222,88,31
+ForegroundLink=253,189,178
+
+[Colors:Selection]
+BackgroundAlternate=168,78,42
+BackgroundNormal=168,78,42
+DecorationFocus=222,88,31
+DecorationHover=222,88,31
+ForegroundActive=222,88,31
+ForegroundInactive=255,255,255
+ForegroundLink=162,64,23
+ForegroundNegative=67,205,189
+ForegroundNeutral=95,125,205
+ForegroundNormal=255,255,255
+ForegroundPositive=156,83,198
+ForegroundVisited=189,195,199
+
+[Colors:Tooltip]
+BackgroundAlternate=55,69,88
+BackgroundNormal=70,88,111
+DecorationFocus=222,88,31
+DecorationHover=222,88,31
+ForegroundActive=222,88,31
+ForegroundInactive=252,253,253
+ForegroundLink=253,189,178
+ForegroundNegative=67,205,189
+ForegroundNeutral=95,125,205
+ForegroundNormal=252,253,253
+ForegroundPositive=156,83,198
+ForegroundVisited=127,140,141
+
+[Colors:View]
+BackgroundAlternate=44,55,70
+BackgroundNormal=44,55,70
+DecorationFocus=222,88,31
+DecorationHover=222,88,31
+ForegroundActive=222,88,31
+ForegroundInactive=252,253,253
+ForegroundLink=253,189,178
+ForegroundNegative=67,205,189
+ForegroundNeutral=95,125,205
+ForegroundNormal=254,254,254
+ForegroundPositive=156,83,198
+ForegroundVisited=127,140,141
+
+[Colors:Window]
+BackgroundAlternate=44,55,70
+BackgroundNormal=44,55,70
+DecorationFocus=222,88,31
+DecorationHover=222,88,31
+ForegroundActive=222,88,31
+ForegroundInactive=252,253,253
+ForegroundLink=253,189,178
+ForegroundNegative=67,205,189
+ForegroundNeutral=95,125,205
+ForegroundNormal=253,253,253
+ForegroundPositive=156,83,198
+ForegroundVisited=127,140,141
+
+[DirSelect Dialog]
+DirSelectDialog Size=929,508
+History Items[$e]=file:$HOME/Games/Heroic,file:///mnt/HHD/Imágenes/Wallpapers,file:///mnt/virtmanager,file:$HOME,file:$HOME,file:$HOME/.bottles,file:$HOME/.bottles,file:$HOME/.bottles,file:$HOME/Games/Heroic,file:$HOME/Games/Heroic,file:$HOME/Games/Otros,file:$HOME/Games/Crisis Core,file:///mnt/HHD/Juegos/Repacks,file:$HOME/.appImages
+Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8e\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
+
+[General]
+AccentColor=222,88,31
+BrowserApplication=brave-origin.desktop
+ColorSchemeHash=9d38eb71ded8ff549da26d57d7cbab9164da243a
+LastUsedCustomAccentColor=232,203,45
+XftAntialias=true
+XftHintStyle=hintslight
+XftSubPixel=none
+accentColorFromWallpaper=true
+fixed=Hack Nerd Font Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+font=Bitstream Vera Sans,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+menuFont=Bitstream Vera Sans,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+smallestReadableFont=Bitstream Vera Sans,8,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+toolBarFont=Bitstream Vera Sans,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+
+[Icons]
+Theme=kora-grey
+
+[KDE]
+AnimationDurationFactor=0.7071067811865475
+LookAndFeelPackage=Otto
+ShowDeleteCommand=false
+contrast=4
+frameContrast=0.2
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=false
+Decoration position=2
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Name
+Sort directories first=true
+Sort hidden files last=false
+Sort reversed=false
+Speedbar Width=148
+View Style=Simple
+
+[PreviewSettings]
+EnableRemoteFolderThumbnail=false
+MaximumRemoteSize=0
+
+[Shortcuts]
+CreateFolder=; Ctrl+Shift+N
+Cut=Ctrl+X
+
+[WM]
+activeBackground=44,55,70
+activeBlend=44,55,70
+activeFont=Bitstream Vera Sans,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+activeForeground=255,255,255
+inactiveBackground=44,55,70
+inactiveBlend=44,55,70
+inactiveForeground=181,182,182

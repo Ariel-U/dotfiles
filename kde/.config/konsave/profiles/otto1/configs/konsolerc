@@ -1,0 +1,17 @@
+[Desktop Entry]
+DefaultProfile=Otto.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Enabled
+
+[Notification Messages]
+CloseAllEmptyTabs=true
+CloseAllTabs=true
+CloseSingleTab=false
+
+[UiSettings]
+ColorScheme=

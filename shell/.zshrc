@@ -89,11 +89,11 @@ if [ -f ~/.aliases ]; then
 fi
 
 # establecer el editor de la terminal
-if [ -f /bin/micro ]; then
+if [ -f /usr/bin/micro ]; then
     export EDITOR=/bin/micro
-elif [ -f /bin/nano ]; then
+elif [ -f /usr/bin/nano ]; then
     export EDITOR=/bin/nano
-elif [ -f /bin/vim ]; then
+elif [ -f /usr/bin/vim ]; then
     export EDITOR=/bin/vim
 fi
 

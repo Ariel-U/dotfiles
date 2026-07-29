@@ -170,7 +170,7 @@ DialogWidth=1051
 [Containments][114][Applets][192][General]
 disabledStatusNotifiers=Pasarela de vídeo Xwayland,chrome_status_icon_1@youtube-music-d,Yakuake,tidal-hifi_status_icon_1
 extraItems=org.kde.kdeconnect,org.kde.plasma.volume,org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.brightness
-hiddenItems=Pasarela de vídeo Xwayland_pipewireToXProxy,org.kde.plasma.battery,org.kde.plasma.clipboard,com.arn.scrobble.tray
+hiddenItems=Pasarela de vídeo Xwayland_pipewireToXProxy,org.kde.plasma.battery,org.kde.plasma.clipboard,com.arn.scrobble.tray,A PipeWire Graph Qt GUI Interface
 knownItems=org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.mediacontroller,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kscreen,org.kde.plasma.clipboard,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.manage-inputmethod,org.kde.plasma.weather
 shownItems=org.kde.plasma.brightness
 
@@ -325,20 +325,6 @@ plugin=org.kde.latte.separator
 [Containments][236][General]
 AppletOrder=262;272;264;263;273;238
 
-[Containments][269]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=2a4ab593-cd55-4eaa-b9a8-c48d958a5574
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][269][Wallpaper][org.kde.image][General]
-Image=/home/ariel/Imágenes/Wallpapers/Juegos/planets_upscayl_2x_upscayl-standard-4x.png
-
 [Containments][270]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
@@ -351,7 +337,25 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][270][Wallpaper][org.kde.image][General]
-Image=/home/ariel/Imágenes/Wallpapers/Juegos/planets_upscayl_2x_upscayl-standard-4x.png
+Image=/home/ariel/Imágenes/Wallpapers/Logos/kde.jpg
+
+[Containments][282]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
+activityId=2a4ab593-cd55-4eaa-b9a8-c48d958a5574
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.desktopcontainment
+wallpaperplugin=org.kde.image
+
+[Containments][282][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][282][Wallpaper][org.kde.image][General]
+Image=/home/ariel/Imágenes/Wallpapers/Logos/kde.jpg
 
 [Containments][46][Wallpaper][org.kde.image][General]
 Image=file:///usr/share/wallpapers/Next/
@@ -383,4 +387,4 @@ immutability=1
 
 [ScreenMapping]
 itemsOnDisabledScreens=0,72e1ccb5-40b2-4b57-93d7-76705bd3d7ab,1,desktop:/io.github.ryubing.Ryujinx.desktop
-screenMapping=desktop:/brave-cinhimbnkkaeohfgghhklpknlkffjgod-Default.desktop,0,2a4ab593-cd55-4eaa-b9a8-c48d958a5574
+screenMapping=
