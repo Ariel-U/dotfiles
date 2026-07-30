@@ -13,7 +13,7 @@
   "system.show_tooltips": 1,
   "system.animations": 1,
   "system.show_presets": 0,
-  "system.show_toolbar": 0,
+  "system.show_toolbar": 1,
   "system.show_rack": 1,
   "system.midiout": 0
 }
