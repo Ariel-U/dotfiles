@@ -1,0 +1,24 @@
+Version 0.3
+===========
+
+1. Update from soure icon themes: Numix, Breeze.
+2. Added emblems icons (Papirus icon theme) and status icons (Papirus Dark icon theme - older version with darker greys).
+
+Version 0.2
+===========
+
+1. Some apps icons were modified:	
+	audacious (Numix Bevel icon theme: gmusicbrowser)
+	deadbeef (Numix Bevel icon theme: musique [modified])
+	doublecmd
+	eog (Numix Bevel icon theme: gpicview [modified])
+	firefox
+	geany
+	gimp
+	gmusicbrowser
+	mpv (Numix Circle icon theme: totem [modified])
+	smplayer (Numix Bevel icon theme: mplayer [modified])
+	sublime-text (Numix Bevel icon theme)
+	terminal (Numix Bevel icon theme: terminal [modified])
+	thunar
+2. Original apps icons are in Numarceeze/0-original_apps_icons folder.

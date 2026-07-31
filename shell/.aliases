@@ -34,7 +34,7 @@ alias restart-pulse="systemctl --user restart pulseaudio"
 
 # verbose en los comandos básicos y pedir confirmación
 alias mv="mv -vi"         #confirmar antes de sobreescribir y muestra lo que hace
-alias cp="cp -rvi"         #confirmar antes de sobreescribir y muestra lo que hace
+alias cp="cp -rvi"        #confirmar antes de sobreescribir y muestra lo que hace
 alias rm="rm -rfv"        #muestra lo que hace. borra directorios
 alias mkdir="mkdir -pv"   #muestra lo que hace
 alias ln="ln -vi"         #confirmar antes de sobreescribir y muestra lo que hace

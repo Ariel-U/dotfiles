@@ -1,6 +1,6 @@
 {
   "Name": "DecentSampler",
-  "Version": "1.14.1",
+  "Version": "1.23.5",
   "Factory Info": {
     "Vendor": "Decidedly",
     "URL": "http://decided.ly",
@@ -17,8 +17,8 @@
       "Category": "Audio Module Class",
       "Name": "DecentSampler",
       "Vendor": "Decidedly",
-      "Version": "1.14.1",
-      "SDKVersion": "VST 3.7.12",
+      "Version": "1.23.5",
+      "SDKVersion": "VST 3.8.0",
       "Sub Categories": [
         "Instrument",
         "Synth",
@@ -33,25 +33,13 @@
       "Category": "Component Controller Class",
       "Name": "DecentSampler",
       "Vendor": "Decidedly",
-      "Version": "1.14.1",
-      "SDKVersion": "VST 3.7.12",
+      "Version": "1.23.5",
+      "SDKVersion": "VST 3.8.0",
       "Sub Categories": [
         "Instrument",
         "Synth",
       ],
       "Class Flags": 2,
-      "Cardinality": 2147483647,
-      "Snapshots": [
-      ],
-    },
-    {
-      "CID": "ABCDEF01C0DEF00D446C647944736D70",
-      "Category": "Plugin Compatibility Class",
-      "Name": "DecentSampler",
-      "Vendor": "Decidedly",
-      "Version": "1.14.1",
-      "SDKVersion": "VST 3.7.12",
-      "Class Flags": 0,
       "Cardinality": 2147483647,
       "Snapshots": [
       ],

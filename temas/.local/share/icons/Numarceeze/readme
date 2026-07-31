@@ -1,0 +1,12 @@
+The theme is intended for dark desktop environments and it inherits Papirus-Dark Icon Theme which is not included in the package.
+This icon theme consists of:
+actions - Breeze Icon Theme (LGPL-2.1+) dark variant and mildly dimmed
+apps - Numix Circle Icon Theme and few from Numix Bevel Icon Theme (terminal, Eog, Sublimetext, and icons for: Audacious, Smplayer, Deadbeef). Some of these were modified, i.e. colors were changed (check peview image)
+devices - from Arc Icon Theme
+emblems - from Papirus icon theme
+mimes - from Numix Icon Theme and slightly unified and dimmed and few colors changed
+places - from Arc Icon Theme
+status - from Papirus icon theme (older version with darkey greys)
+
+All credits go to the appropriate authors.
+All the icons - besides actions wich are from Breeze Icon Theme (LGPL-2.1+) - are under GPL-3+ license.
