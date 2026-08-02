@@ -4,10 +4,10 @@ RightButton;NoModifier=org.kde.contextmenu
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
+[Containments][25]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
-activityId=2a4ab593-cd55-4eaa-b9a8-c48d958a5574
+activityId=f9d89866-28cb-4607-9fbe-5c55fc54219d
 formfactor=0
 immutability=1
 lastScreen=0
@@ -15,10 +15,8 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][2]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=2a4ab593-cd55-4eaa-b9a8-c48d958a5574
+[Containments][26]
+activityId=f9d89866-28cb-4607-9fbe-5c55fc54219d
 formfactor=0
 immutability=1
 lastScreen=1

@@ -18,6 +18,10 @@ alias zshrc="$EDITOR $HOME/.zshrc"
 alias al="$EDITOR $HOME/.aliases"
 alias latencia="pw-metadata -n settings 0 clock.force-quantum" # latencia de pipewire
 
+# reemplazar herramientas
+if [ -f /usr/bin/bat ]; then
+	alias cat="bat"
+fi
 
 # systemd
 alias status="systemctl status"

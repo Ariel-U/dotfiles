@@ -90,7 +90,7 @@ fi
 
 # establecer el editor de la terminal
 if [ -f /usr/bin/micro ]; then
-    export EDITOR=/bin/micro
+    export EDITOR=/usr/bin/micro
 elif [ -f /usr/bin/nano ]; then
     export EDITOR=/bin/nano
 elif [ -f /usr/bin/vim ]; then
@@ -100,3 +100,4 @@ fi
 export PATH="/home/$USER/.local/bin:$PATH"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+eval "$(zoxide init --cmd cd zsh)"
