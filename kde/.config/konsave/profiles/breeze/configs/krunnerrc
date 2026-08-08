@@ -1,0 +1,9 @@
+[General]
+FreeFloating=true
+history=
+
+[Plugins]
+krunner_sessionsEnabled=true
+
+[Plugins][Favorites]
+plugins=krunner_services,krunner_shell,krunner_sessions,krunner_powerdevil,krunner_systemsettings

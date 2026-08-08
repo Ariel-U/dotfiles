@@ -3,4 +3,3 @@ PointerAccelerationProfile=1
 
 [Mouse]
 X11LibInputXAccelProfileFlat=true
-cursorTheme=Breeze_Light

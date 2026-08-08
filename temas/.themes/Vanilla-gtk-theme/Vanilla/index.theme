@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Vanilla
+Type=X-GNOME-Metatheme
+Comment=Vanilla theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Vanilla
+MetacityTheme=Vanilla
+IconTheme=Vanilla
+CursorTheme=mate
+CursorSize=24
+X-Vanilla-Dark=false
+X-Vanilla-Accent-Name=default
+X-Vanilla-Accent-Color=
+

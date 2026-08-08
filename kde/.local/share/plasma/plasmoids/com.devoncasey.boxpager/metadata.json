@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "me@devoncasey.com",
+                "Name": "Devon Casey"
+            }
+        ],
+        "Category": "Windows and Tasks",
+        "Description": "Numbered boxes for switching virtual desktops",
+        "Icon": "virtual-desktops",
+        "Id": "com.devoncasey.boxpager",
+        "License": "GPL-3.0+",
+        "Name": "Box Pager",
+        "Version": "1.1.1",
+        "Website": "https://codeberg.org/cowbones/boxpager"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.virtualdesktops"
+    ]
+}

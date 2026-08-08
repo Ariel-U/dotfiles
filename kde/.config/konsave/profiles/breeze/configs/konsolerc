@@ -1,0 +1,16 @@
+[Desktop Entry]
+DefaultProfile=Qogir .profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+MenuBar=Disabled
+
+[Notification Messages]
+CloseAllEmptyTabs=true
+CloseAllTabs=true
+CloseSingleTab=false
+
+[UiSettings]
+ColorScheme=

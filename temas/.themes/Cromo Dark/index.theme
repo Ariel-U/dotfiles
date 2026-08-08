@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Cromo Dark
+Comment=GTK Theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Cromo Dark
+MetacityTheme=Cromo Dark
+IconTheme=Marwaita-Light
+CursorTheme=Marwaita-Light
+CursorSize=24

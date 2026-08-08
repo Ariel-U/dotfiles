@@ -1,0 +1,20 @@
+{
+  "KPackageStructure": "KWin/Aurorae",
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "deadgirl"
+      }
+    ],
+    "Category": "Plasma 6 Window Decorations",
+    "ServiceTypes": [
+      "KWin/Aurorae"
+    ],
+    "EnabledByDefault": true,
+    "Name": "Xyphract",
+    "Description": "hard-square white field with red edge-light and a quiet purple fault",
+    "Id": "xyphract",
+    "Version": "1.1",
+    "License": "GPL-3.0+"
+  }
+}

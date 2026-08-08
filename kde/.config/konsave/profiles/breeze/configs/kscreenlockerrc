@@ -1,0 +1,9 @@
+[Daemon]
+Autolock=false
+LockGrace=0
+RequirePassword=false
+Timeout=0
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/home/ariel/Imágenes/wallpapers/Logos/kde.jpg
+PreviewImage=/home/ariel/Imágenes/wallpapers/Logos/kde.jpg

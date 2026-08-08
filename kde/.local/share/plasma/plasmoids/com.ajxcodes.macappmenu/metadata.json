@@ -1,0 +1,33 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "dhruv8sh@proton.me",
+                "Name": "Dhruvesh Surolia"
+            },
+            {
+                "Email": "me@ajx.codes",
+                "Name": "ajxcodes"
+            },
+            {
+                "Email": "[EMAIL_ADDRESS]",
+                "Name": "ciolansteen"
+            },
+            {
+                "Email": "[EMAIL_ADDRESS]",
+                "Name": "NotAlexNoyle"
+            }
+        ],
+        "Category": "Windows and Tasks",
+        "Description": "Shows the application title and icon of the active window with a Mac-like context menu",
+        "Icon": "preferences-desktop",
+        "Id": "com.ajxcodes.macappmenu",
+        "License": "GPLv2",
+        "Name": "Mac Title Menu",
+        "Version": "v0.12.5",
+        "Website": "https://github.com/ajxcodes/mac-title-menu"
+    },
+    "Keyword": "window title icon mac menu",
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
