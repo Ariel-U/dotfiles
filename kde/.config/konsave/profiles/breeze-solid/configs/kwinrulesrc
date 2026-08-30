@@ -1,0 +1,112 @@
+[387b487a-8f6a-4fc0-a2cf-375f4f90a45f]
+Description=Brave pip
+above=true
+aboverule=3
+acceptfocusrule=2
+desktops=\\0
+desktopsrule=3
+position=1536,803
+positionrule=4
+size=693,390
+sizerule=4
+skiptaskbar=true
+skiptaskbarrule=3
+title=Pantalla en pantalla
+titlematch=3
+types=1
+wmclass=brave
+wmclasscomplete=true
+wmclassmatch=3
+
+[5ee85aa7-0ede-4d2a-9dcf-2eaec7e71dd1]
+Description=Firefox pip
+above=true
+aboverule=2
+acceptfocusrule=2
+desktops=\\0
+desktopsrule=3
+position=1440,766
+positionrule=4
+skippager=true
+skippagerrule=3
+skipswitcher=true
+skipswitcherrule=3
+skiptaskbar=true
+skiptaskbarrule=3
+title=Picture-in-Picture
+titlematch=3
+types=1
+wmclass=org.mozilla.firefox
+wmclasscomplete=true
+wmclassmatch=3
+
+[681738e0-c269-4949-ae41-e7779ffb85c8]
+Description=Scrcpy
+above=true
+aboverule=3
+skiptaskbar=true
+skiptaskbarrule=2
+title=moto g04s
+titlematch=3
+types=1
+wmclass=scrcpy scrcpy
+wmclasscomplete=true
+wmclassmatch=3
+
+[8304d3ad-b8c1-4a57-a8fe-0826c3499b10]
+Description=Dolphin
+hastransientparentmatch=1
+size=1000,618
+sizerule=3
+types=1
+wmclass=dolphin org.kde.dolphin
+wmclasscomplete=true
+wmclassmatch=3
+
+[8eb2465e-3cba-4ad6-a55c-e478bb7d057e]
+Description=Steam
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+title=Steam
+titlematch=1
+types=1
+wmclass=steamwebhelper steam
+wmclasscomplete=true
+wmclassmatch=3
+
+[General]
+count=8
+rules=5ee85aa7-0ede-4d2a-9dcf-2eaec7e71dd1,387b487a-8f6a-4fc0-a2cf-375f4f90a45f,681738e0-c269-4949-ae41-e7779ffb85c8,8eb2465e-3cba-4ad6-a55c-e478bb7d057e,aef2c0ed-32ab-4084-9b16-6344b2915fe9,d8531b3d-ad86-433d-81ec-691610bca44a,8304d3ad-b8c1-4a57-a8fe-0826c3499b10,b75077ac-74b6-45a7-8a06-3ab889f665ef
+
+[aef2c0ed-32ab-4084-9b16-6344b2915fe9]
+Description=konsole
+size=1000,618
+sizerule=3
+types=1
+wmclass=org.kde.konsole
+wmclasscomplete=true
+wmclassmatch=3
+
+[b75077ac-74b6-45a7-8a06-3ab889f665ef]
+Description=DecentSampler
+ignoregeometry=true
+ignoregeometryrule=2
+position=562,228
+positionrule=3
+size=820,409
+sizerule=3
+wmclass=DecentSampler
+wmclassmatch=1
+
+[d8531b3d-ad86-433d-81ec-691610bca44a]
+Description=Monitor de kde
+size=1200,740
+sizerule=3
+title=Performance — Monitor del sistema
+titlematch=3
+types=1
+wmclass=plasma-systemmonitor org.kde.plasma-systemmonitor
+wmclasscomplete=true
+wmclassmatch=1

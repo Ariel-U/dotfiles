@@ -2,7 +2,7 @@
 Categories=Audio;Video;AudioVideo;AudioVideoEditing;Recorder;
 Comment=REAPER
 Encoding=UTF-8
-Exec=pw-jack /home/ariel/.local/share/REAPER/reaper %F
+Exec=distrobox-enter arch --reaper
 Icon=cockos-reaper
 MimeType=application/x-reaper-project;application/x-reaper-project-backup;application/x-reaper-theme
 Name=REAPER

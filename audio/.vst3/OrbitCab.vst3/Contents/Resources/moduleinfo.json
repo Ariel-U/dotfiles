@@ -1,0 +1,48 @@
+{
+  "Name": "OrbitCab",
+  "Version": "2.5.0",
+  "Factory Info": {
+    "Vendor": "Darwin's Cat",
+    "URL": "",
+    "E-Mail": "",
+    "Flags": {
+      "Unicode": true,
+      "Classes Discardable": false,
+      "Component Non Discardable": false,
+    },
+  },
+  "Classes": [
+    {
+      "CID": "ABCDEF019182FAEB446361744F726274",
+      "Category": "Audio Module Class",
+      "Name": "OrbitCab",
+      "Vendor": "Darwin's Cat",
+      "Version": "2.5.0",
+      "SDKVersion": "VST 3.8.0",
+      "Sub Categories": [
+        "Fx",
+        "Distortion",
+      ],
+      "Class Flags": 0,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+    {
+      "CID": "ABCDEF011234ABCD446361744F726274",
+      "Category": "Component Controller Class",
+      "Name": "OrbitCab",
+      "Vendor": "Darwin's Cat",
+      "Version": "2.5.0",
+      "SDKVersion": "VST 3.8.0",
+      "Sub Categories": [
+        "Fx",
+        "Distortion",
+      ],
+      "Class Flags": 0,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+  ],
+}

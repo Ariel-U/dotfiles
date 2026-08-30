@@ -1,0 +1,48 @@
+{
+  "Name": "ZeroComp",
+  "Version": "1.1.7",
+  "Factory Info": {
+    "Vendor": "Jun Murakami",
+    "URL": "",
+    "E-Mail": "",
+    "Flags": {
+      "Unicode": true,
+      "Classes Discardable": false,
+      "Component Non Discardable": false,
+    },
+  },
+  "Classes": [
+    {
+      "CID": "ABCDEF019182FAEB4A6D62635A724370",
+      "Category": "Audio Module Class",
+      "Name": "ZeroComp",
+      "Vendor": "Jun Murakami",
+      "Version": "1.1.7",
+      "SDKVersion": "VST 3.8.0",
+      "Sub Categories": [
+        "Fx",
+        "Dynamics",
+      ],
+      "Class Flags": 0,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+    {
+      "CID": "ABCDEF011234ABCD4A6D62635A724370",
+      "Category": "Component Controller Class",
+      "Name": "ZeroComp",
+      "Vendor": "Jun Murakami",
+      "Version": "1.1.7",
+      "SDKVersion": "VST 3.8.0",
+      "Sub Categories": [
+        "Fx",
+        "Dynamics",
+      ],
+      "Class Flags": 0,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+  ],
+}

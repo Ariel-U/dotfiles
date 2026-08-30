@@ -1,14 +1,3 @@
-[092df352-904b-479a-98fe-71e808902b84]
-Description=Brave
-position=0,0
-positionrule=3
-size=1920,1040
-sizerule=3
-types=1
-wmclass=brave brave-origin
-wmclasscomplete=true
-wmclassmatch=3
-
 [387b487a-8f6a-4fc0-a2cf-375f4f90a45f]
 Description=Brave pip
 above=true
@@ -26,61 +15,6 @@ title=Pantalla en pantalla
 titlematch=3
 types=1
 wmclass=brave
-wmclasscomplete=true
-wmclassmatch=3
-
-[4b07b3d6-9635-4db0-a63d-c7ca95385c11]
-Description=Zen pip
-above=true
-aboverule=3
-desktops=\\0
-desktopsrule=3
-position=1280,688
-positionrule=4
-skippager=true
-skippagerrule=3
-skiptaskbar=true
-skiptaskbarrule=3
-title=Picture-in-Picture
-titlematch=3
-wmclass=app.zen_browser.zen
-wmclasscomplete=true
-wmclassmatch=3
-
-[4cf17a44-b58b-4999-8f2e-d5e173676c9e]
-Description=Librewolf pip
-above=true
-aboverule=3
-acceptfocusrule=2
-desktops=\\0
-desktopsrule=3
-position=1440,766
-positionrule=4
-skiptaskbar=true
-skiptaskbarrule=3
-title=Picture-in-picture
-titlematch=3
-types=1
-wmclass=librewolf
-wmclasscomplete=true
-wmclassmatch=3
-
-[538bd63a-f385-458d-8ce1-329fe7acf9f5]
-Description=Floorp pip
-above=true
-aboverule=3
-desktops=\\0
-desktopsrule=3
-position=1491,808
-positionrule=4
-skippager=true
-skippagerrule=3
-skiptaskbar=true
-skiptaskbarrule=3
-title=Picture-in-picture
-titlematch=3
-types=1
-wmclass=one.ablaze.floorp
 wmclasscomplete=true
 wmclassmatch=3
 
@@ -121,6 +55,7 @@ wmclassmatch=3
 
 [8304d3ad-b8c1-4a57-a8fe-0826c3499b10]
 Description=Dolphin
+hastransientparentmatch=1
 size=1000,618
 sizerule=3
 types=1
@@ -142,19 +77,8 @@ wmclasscomplete=true
 wmclassmatch=3
 
 [General]
-count=12
-rules=5ee85aa7-0ede-4d2a-9dcf-2eaec7e71dd1,4cf17a44-b58b-4999-8f2e-d5e173676c9e,387b487a-8f6a-4fc0-a2cf-375f4f90a45f,538bd63a-f385-458d-8ce1-329fe7acf9f5,4b07b3d6-9635-4db0-a63d-c7ca95385c11,681738e0-c269-4949-ae41-e7779ffb85c8,8eb2465e-3cba-4ad6-a55c-e478bb7d057e,ae0c92ff-04cf-4a4a-9d71-9091abc4c0a4,aef2c0ed-32ab-4084-9b16-6344b2915fe9,8304d3ad-b8c1-4a57-a8fe-0826c3499b10,092df352-904b-479a-98fe-71e808902b84,d8531b3d-ad86-433d-81ec-691610bca44a
-
-[ae0c92ff-04cf-4a4a-9d71-9091abc4c0a4]
-Description=Librewolf
-maximizehoriz=true
-maximizehorizrule=3
-maximizevert=true
-maximizevertrule=3
-title=LibreWolf
-wmclass=librewolf
-wmclasscomplete=true
-wmclassmatch=3
+count=8
+rules=5ee85aa7-0ede-4d2a-9dcf-2eaec7e71dd1,387b487a-8f6a-4fc0-a2cf-375f4f90a45f,681738e0-c269-4949-ae41-e7779ffb85c8,8eb2465e-3cba-4ad6-a55c-e478bb7d057e,aef2c0ed-32ab-4084-9b16-6344b2915fe9,d8531b3d-ad86-433d-81ec-691610bca44a,8304d3ad-b8c1-4a57-a8fe-0826c3499b10,b75077ac-74b6-45a7-8a06-3ab889f665ef
 
 [aef2c0ed-32ab-4084-9b16-6344b2915fe9]
 Description=konsole
@@ -164,6 +88,13 @@ types=1
 wmclass=org.kde.konsole
 wmclasscomplete=true
 wmclassmatch=3
+
+[b75077ac-74b6-45a7-8a06-3ab889f665ef]
+Description=DecentSampler
+ignoregeometry=true
+ignoregeometryrule=2
+wmclass=DecentSampler
+wmclassmatch=1
 
 [d8531b3d-ad86-433d-81ec-691610bca44a]
 Description=Monitor de kde

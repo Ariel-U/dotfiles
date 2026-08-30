@@ -1,0 +1,56 @@
+<TRACK
+  NAME "Marshall JTM 45"
+  PEAKCOL 21053761
+  BEAT -1
+  AUTOMODE 0
+  PANLAWFLAGS 3
+  VOLPAN 0.70794578 0 -1 -1 1
+  MUTESOLO 0 0 0
+  IPHASE 0
+  PLAYOFFS 0 1
+  ISBUS 0 0
+  BUSCOMP 0 0 0 0 0
+  SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+  FIXEDLANES 9 0 0 0 0
+  REC 1 1 1 0 0 0 0 0
+  VU 2
+  TRACKHEIGHT 0 0 0 0 0 0 0
+  INQ 0 0 0 0.5 100 0 0 100
+  NCHAN 2
+  FX 1
+  TRACKID {5ECD2D19-BB60-77ED-2300-DE65C33BCBB1}
+  PERF 0
+  UNDO_HAS_TRACKENV
+  MIDIOUT -1
+  MAINSEND 1 0
+  <FXCHAIN
+    SHOW 0
+    LASTSEL 0
+    DOCKED 0
+    BYPASS 0 0 0
+    <VST "VST: ReaGate (Cockos)" reagate.vst.so 0 "" 1919248244<56535472656774726561676174650000> ""
+      dGdlcu9e7f4EAAAAAQAAAAAAAAACAAAAAAAAAAQAAAAAAAAACAAAAAAAAAACAAAAAQAAAAAAAAACAAAAAAAAAFwAAAAAAAAAAAAQAA==
+      776t3g3wrd4866s6ppvEOwrXozwAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAACc0QczAACAP5zRBzMAAIA/AAAAAAAAAAAAAAAALBYLPwAAAAAAAAAAAAAAAAAAAAA=
+      AAAQAAAA
+    >
+    FLOATPOS 274 97 625 406
+    FXID {7B42DA6D-17B4-E567-268A-4F7FA3B0F6C7}
+    WAK 0 0
+    BYPASS 0 0 0
+    <LV2 "LV2: Neural Amp Modeler (Mike Oliphant) (Mono)" http://github.com/mikeoliphant/neural-amp-modeler-lv2 ""
+      CFG 0 0 0 ""
+      <IN_PINS
+      >
+      <OUT_PINS
+        PIN 0 0 1
+      >
+      P input_level -10.68000030517578125 output_level 0 quality_scale 1
+      <STATE
+        P http://github.com/mikeoliphant/neural-amp-modeler-lv2#model "/mnt/HHD/Recursos de audio/Amplificadores NAM/Guitarra/Combo - Marshall JTM 45_100/MRSH SA100 I Edge BAL CAB.nam" 3
+      >
+    >
+    FLOATPOS 760 438 600 138
+    FXID {181E9E9D-85BA-6427-5C57-E6E4D6540C61}
+    WAK 0 0
+  >
+>

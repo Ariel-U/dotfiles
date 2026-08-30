@@ -147,10 +147,6 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.kdeconnect
 
-[Containments][235][Applets][243][Applets][246]
-immutability=1
-plugin=org.kde.plasma.networkmanagement
-
 [Containments][235][Applets][243][Applets][248]
 immutability=1
 plugin=org.kde.plasma.clipboard
@@ -191,7 +187,7 @@ DialogWidth=1123
 
 [Containments][235][Applets][243][General]
 disabledStatusNotifiers=Pasarela de vídeo Xwayland,Yakuake
-extraItems=org.kde.kdeconnect,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.clipboard
+extraItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.clipboard
 hiddenItems=A PipeWire Graph Qt GUI Interface,org.kde.plasma.bluetooth,org.kde.plasma.clipboard
 knownItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.weather
 
@@ -234,7 +230,7 @@ DialogWidth=720
 
 [Containments][235][Applets][271][Configuration][General]
 hideLauncherOnStart=false
-launchers=applications:org.mozilla.firefox.desktop,applications:brave-origin.desktop,applications:app.zen_browser.zen.desktop,file:///var/lib/flatpak/exports/share/applications/io.anytype.anytype.desktop,applications:youtube-music-desktop-app.desktop
+launchers=applications:org.mozilla.firefox.desktop,file:///var/lib/flatpak/exports/share/applications/io.anytype.anytype.desktop,applications:youtube-music-desktop-app.desktop
 middleClickAction=Close
 taskMaxWidth=Wide
 

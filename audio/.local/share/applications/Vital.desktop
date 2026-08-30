@@ -1,10 +1,10 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Categories=AudioVideo;Audio;X-Jack;Midi;X-MIDI;
-Comment=spectral wavetable synth
-Exec=/home/ariel/.local/share/vital/Vital
-GenericName=synth
+Comment=Spectral warping wavetable synth
+Exec=$HOME/.local/share/vital/Vital
+GenericName=DAW
 Icon=/home/ariel/.local/share/vital/vital_no_background_300.png
 Keywords=Audio;Sound;Guitar;Amplifier;Record;Midi;Jack;
-Name=Vital synth
+Name=Vital Synth
 Type=Application

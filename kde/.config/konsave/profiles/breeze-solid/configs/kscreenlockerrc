@@ -1,0 +1,10 @@
+[Daemon]
+Autolock=false
+LockGrace=0
+LockOnResume=false
+RequirePassword=false
+Timeout=0
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/home/ariel/Imágenes/wallpapers/Dibujo-Render/forrest_foxes.jpg
+PreviewImage=/home/ariel/Imágenes/wallpapers/Dibujo-Render/forrest_foxes.jpg

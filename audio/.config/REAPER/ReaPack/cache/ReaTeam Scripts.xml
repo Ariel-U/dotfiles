@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" commit="b4f0a650ecbc67a99cb366e0e856231118f959bc" name="ReaTeam Scripts">
+<index version="1" commit="32570b3629e3eb48a6027708270ba73a1db098eb" name="ReaTeam Scripts">
   <category name="Cursor">
     <reapack name="amagalma_Move edit cursor to closest item edge (among the selected items).lua" type="script" desc="Move edit cursor to closest item edge (among the selected items)">
       <metadata>
@@ -886,6 +886,10 @@ forum thread
       <version name="1.1.5" author="cfillion" time="2025-04-12T18:42:38Z">
         <changelog><![CDATA[• Fix tree display mode when there are over 999 children]]></changelog>
         <source>https://github.com/ReaTeam/ReaScripts/raw/594ce3a5416b77632b483fbf02a09decb4a8504d/Development/cfillion_Lua%20profiler.lua</source>
+      </version>
+      <version name="1.1.6" author="cfillion" time="2026-07-27T20:36:53Z">
+        <changelog><![CDATA[• Fix infinite recursion when a table contains its own metatable]]></changelog>
+        <source>https://github.com/ReaTeam/ReaScripts/raw/88619bb17bea8b02b5f256267728825199209181/Development/cfillion_Lua%20profiler.lua</source>
       </version>
     </reapack>
     <reapack name="cfillion_Search action by command ID or name.lua" type="script" desc="Search action by command ID or name">
@@ -24611,6 +24615,30 @@ Changed slider behavior: clicking on the slider does not move the handle any mor
         <changelog><![CDATA[- Show detailed report if no FX to apply.
 - Fix corner cases that would cause a crash while showing report.]]></changelog>
         <source main="main">https://github.com/ReaTeam/ReaScripts/raw/bc89ace078c76c3d10ef88b7aeb274f726fddf30/Various/amagalma_Calculate%20difference%20in%20LUFS%20when%20take%20and%20track%20FX%20are%20applied%20to%20selected%20item%20via%20dry%20run.lua</source>
+      </version>
+    </reapack>
+    <reapack name="amagalma_Calculate Peak to Loudness Ratio (PLR - new Crest Factor) of selected items source media.lua" type="script" desc="Calculate Peak to Loudness Ratio (PLR - new Crest Factor) of selected items source media">
+      <metadata>
+        <link rel="donation">https://www.paypal.me/amagalma</link>
+      </metadata>
+      <version name="1.00" author="amagalma" time="2026-07-29T10:16:24Z">
+        <source main="main">https://github.com/ReaTeam/ReaScripts/raw/3a2a33db48f275468cbb36254f87147ec6658ab4/Various/amagalma_Calculate%20Peak%20to%20Loudness%20Ratio%20(PLR%20-%20new%20Crest%20Factor)%20of%20selected%20items%20source%20media.lua</source>
+      </version>
+    </reapack>
+    <reapack name="amagalma_Calculate Peak to Loudness Ratio (PLR - new Crest Factor) of selected items, including take and track FX and settings.lua" type="script" desc="Calculate Peak to Loudness Ratio (PLR - new Crest Factor) of selected items, including take and track FX and settings">
+      <metadata>
+        <link rel="donation">https://www.paypal.me/amagalma</link>
+      </metadata>
+      <version name="1.00" author="amagalma" time="2026-07-29T10:10:08Z">
+        <source main="main">https://github.com/ReaTeam/ReaScripts/raw/54df70f3481fc603296011684a1ee9db86b2f0d4/Various/amagalma_Calculate%20Peak%20to%20Loudness%20Ratio%20(PLR%20-%20new%20Crest%20Factor)%20of%20selected%20items,%20including%20take%20and%20track%20FX%20and%20settings.lua</source>
+      </version>
+    </reapack>
+    <reapack name="amagalma_Calculate Peak to Loudness Ratio (PLR - new Crest Factor) of selected tracks (within time selection , if it exists).lua" type="script" desc="Calculate Peak to Loudness Ratio (PLR - new Crest Factor) of selected tracks (within time selection , if it exists)">
+      <metadata>
+        <link rel="donation">https://www.paypal.me/amagalma</link>
+      </metadata>
+      <version name="1.00" author="amagalma" time="2026-07-31T14:02:22Z">
+        <source main="main">https://github.com/ReaTeam/ReaScripts/raw/32570b3629e3eb48a6027708270ba73a1db098eb/Various/amagalma_Calculate%20Peak%20to%20Loudness%20Ratio%20(PLR%20-%20new%20Crest%20Factor)%20of%20selected%20tracks%20(within%20time%20selection%20,%20if%20it%20exists).lua</source>
       </version>
     </reapack>
     <reapack name="amagalma_Chunk ViewerEditor.lua" type="script" desc="Chunk Viewer/Editor">

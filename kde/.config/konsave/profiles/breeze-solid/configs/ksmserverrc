@@ -1,0 +1,25 @@
+[General]
+confirmLogout=false
+loginMode=emptySession
+
+[LegacySession: saved at previous logout]
+count=0
+
+[LegacySession: saved by user]
+count=0
+
+[Session: saved at previous logout]
+count=0
+
+[Session: saved by user]
+clientId1=10c7d4d4dc000176986376500000010860002
+clientId2=10c7d4d4dc000176987654400000010860004
+count=2
+program1=/usr/bin/qpwgraph
+program2=firefox
+restartCommand1=/usr/bin/qpwgraph,-session,10c7d4d4dc000176986376500000010860002_1769878613_253813
+restartCommand2=/usr/lib/firefox/firefox,--sm-client-id,10c7d4d4dc000176987654400000010860004
+restartStyleHint1=0
+restartStyleHint2=0
+userId1=ariel
+userId2=ariel

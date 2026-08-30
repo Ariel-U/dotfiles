@@ -1,0 +1,62 @@
+{
+  "Name": "SpeedrumLite",
+  "Version": "1.0.3",
+  "Factory Info": {
+    "Vendor": "Apisonic Labs",
+    "URL": "www.apisoniclabs.com",
+    "E-Mail": "info@apisoniclabs.com",
+    "Flags": {
+      "Unicode": true,
+      "Classes Discardable": false,
+      "Component Non Discardable": false,
+    },
+  },
+  "Classes": [
+    {
+      "CID": "ABCDEF019182FAEB41704C61416C5370",
+      "Category": "Audio Module Class",
+      "Name": "Speedrum Lite",
+      "Vendor": "Apisonic Labs",
+      "Version": "1.0.3",
+      "SDKVersion": "VST 3.7.8",
+      "Sub Categories": [
+        "Instrument",
+        "Drum",
+        "Sampler",
+      ],
+      "Class Flags": 2,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+    {
+      "CID": "ABCDEF011234ABCD41704C61416C5370",
+      "Category": "Component Controller Class",
+      "Name": "Speedrum Lite",
+      "Vendor": "Apisonic Labs",
+      "Version": "1.0.3",
+      "SDKVersion": "VST 3.7.8",
+      "Sub Categories": [
+        "Instrument",
+        "Drum",
+        "Sampler",
+      ],
+      "Class Flags": 2,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+    {
+      "CID": "ABCDEF01C0DEF00D41704C61416C5370",
+      "Category": "Plugin Compatibility Class",
+      "Name": "Speedrum Lite",
+      "Vendor": "Apisonic Labs",
+      "Version": "1.0.3",
+      "SDKVersion": "VST 3.7.8",
+      "Class Flags": 0,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+  ],
+}
